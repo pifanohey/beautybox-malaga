@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BeautyBox Málaga - Especialistas en extensiones de pestañas, diseño de cejas, microblading, nanoblading y manicura rusa en el centro de Málaga.">
+    <title>BeautyBox Málaga | Lashes & Brows - Extensiones de Pestañas y Cejas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        /* ESTILOS ORIGINALES - MANTENIDOS INTACTOS */
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--primary-color:#d4a5a5;--secondary-color:#1a1a1a;--accent-color:#c48b9f;--light-bg:#f9f7f5;--white:#fff;--text-dark:#2c2c2c;--text-light:#666;--transition:all .3s ease}
+        html{scroll-behavior:smooth}
+        body{font-family:Montserrat,sans-serif;color:var(--text-dark);line-height:1.6;overflow-x:hidden}
+        h1,h2,h3,h4,h5,h6{font-family:'Cormorant Garamond',serif;font-weight:600}
+        header{position:fixed;width:100%;top:0;z-index:1000;background:var(--white);box-shadow:0 2px 20px rgba(0,0,0,.05);transition:var(--transition)}
+        nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 3%;max-width:1600px;margin:0 auto}
+        .logo{display:flex;align-items:center;gap:1rem;text-decoration:none;flex-shrink:0}
+        .logo img{height:70px;width:70px;object-fit:contain;transition:var(--transition);border-radius:50%;box-shadow:0 2px 10px rgba(0,0,0,0.08)}
+        .logo img:hover{transform:scale(1.05)}
+        .logo-text{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700;color:var(--secondary-color);line-height:1.2}
+        .logo-text span{color:var(--primary-color);font-size:.85rem;display:block;font-weight:400;margin-top:-2px}
+        .nav-links{display:flex;list-style:none;gap:1.5rem;align-items:center;flex-wrap:nowrap}
+        .nav-links a{text-decoration:none;color:var(--text-dark);font-size:.9rem;font-weight:500;transition:var(--transition);letter-spacing:.3px;white-space:nowrap}
+        .nav-links a:hover{color:var(--primary-color)}
+        .btn-primary{background:var(--primary-color);color:var(--white);padding:.8rem 2rem;border-radius:30px;text-decoration:none;font-weight:500;transition:var(--transition);border:none;cursor:pointer;display:inline-block}
+        .btn-primary:hover{background:var(--accent-color);transform:translateY(-2px);box-shadow:0 5px 20px rgba(196,139,159,.3)}
+        .menu-toggle{display:none;font-size:1.5rem;cursor:pointer;color:var(--secondary-color)}
+        .hero{margin-top:80px;height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:#1a1a1a}
+        .hero-video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:0;object-fit:cover;filter:brightness(0.7)}
+        .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at center,rgba(26,26,26,0.3) 0%,rgba(26,26,26,0.75) 100%);z-index:1}
+        .hero-content{max-width:800px;padding:3rem;animation:fadeInUp 1s ease;position:relative;z-index:2;background:rgba(255,255,255,0.95);border-radius:25px;box-shadow:0 20px 60px rgba(0,0,0,0.3);backdrop-filter:blur(10px)}
+        .hero h1{font-size:4rem;color:var(--secondary-color);margin-bottom:1rem;line-height:1.2;text-shadow:none}
+        .hero p{font-size:1.3rem;color:var(--text-dark);margin-bottom:2rem;font-weight:400}
+        .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+        .btn-secondary{background:var(--white);color:var(--secondary-color);padding:.8rem 2rem;border-radius:30px;text-decoration:none;font-weight:500;transition:var(--transition);border:2px solid var(--secondary-color);box-shadow:0 4px 15px rgba(0,0,0,0.1)}
+        .btn-secondary:hover{background:var(--secondary-color);color:var(--white);transform:translateY(-2px);box-shadow:0 6px 20px rgba(26,26,26,0.3)}
+        section{padding:5rem 5%;max-width:1400px;margin:0 auto}
+        .section-title{text-align:center;margin-bottom:3rem}
+        .section-title h2{font-size:3rem;color:var(--secondary-color);margin-bottom:1rem}
+        .section-title p{font-size:1.1rem;color:var(--text-light);max-width:600px;margin:0 auto}
+        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem}
+        .service-card{background:var(--white);border-radius:15px;overflow:hidden;box-shadow:0 5px 25px rgba(0,0,0,.08);transition:var(--transition);cursor:pointer}
+        .service-card:hover{transform:translateY(-10px);box-shadow:0 10px 40px rgba(0,0,0,.12)}
+        .service-image{height:350px;background:linear-gradient(135deg,var(--light-bg),var(--primary-color));display:flex;align-items:center;justify-content:center;font-size:4rem;color:var(--white);background-size:85%;background-repeat:no-repeat;background-position:center;position:relative;overflow:hidden}
+        .service-image video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0}
+        .service-image::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to bottom,rgba(26,26,26,0.1),rgba(212,165,165,.2));transition:var(--transition);z-index:1}
+        .service-card:hover .service-image::after{background:linear-gradient(to bottom,rgba(26,26,26,0.3),rgba(212,165,165,.4))}
+        .service-image i{position:relative;z-index:1}
+        .info-badge{position:absolute;top:15px;right:15px;background:rgba(212,165,165,0.95);color:var(--white);padding:.5rem 1rem;border-radius:25px;font-size:.85rem;font-weight:600;z-index:2;display:flex;align-items:center;gap:.4rem;box-shadow:0 4px 15px rgba(0,0,0,0.2);animation:pulse 2s ease-in-out infinite}
+        .info-badge i{font-size:.9rem}
+        @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+        .service-card:hover .info-badge{background:rgba(212,165,165,1);transform:scale(1.1)}
+        .service-content{padding:2rem}
+        .service-content h3{font-size:1.8rem;color:var(--secondary-color);margin-bottom:1rem}
+        .service-content p{color:var(--text-light);margin-bottom:1rem;font-size:.95rem}
+        .service-price{font-size:1.2rem;color:var(--primary-color);font-weight:600;margin:1rem 0}
+        .about-content{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+        .about-image{height:500px;background:url(https://images.unsplash.com/photo-1519415387722-a1c3bbef716c?w=800&q=80);background-size:cover;background-position:center;border-radius:15px;position:relative}
+        .about-image::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(212,165,165,.3),rgba(26,26,26,.2));border-radius:15px}
+        .about-text h3{font-size:2.5rem;margin-bottom:1.5rem;color:var(--secondary-color)}
+        .about-text p{margin-bottom:1rem;color:var(--text-light);font-size:1.05rem}
+        .features{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;margin-top:2rem}
+        .feature-item{display:flex;align-items:center;gap:1rem}
+        .feature-icon{width:50px;height:50px;background:var(--light-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary-color);font-size:1.3rem}
+        .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+        .gallery-item{height:350px;background:var(--light-bg);border-radius:15px;overflow:hidden;position:relative;cursor:pointer;transition:var(--transition);background-size:cover;background-position:center}
+        .gallery-item:hover{transform:scale(1.05)}
+        .gallery-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);padding:2rem;color:var(--white);transform:translateY(100%);transition:var(--transition)}
+        .gallery-item:hover .gallery-overlay{transform:translateY(0)}
+        .testimonials{background:var(--light-bg)}
+        .testimonials-slider{max-width:800px;margin:0 auto;text-align:center}
+        
+        /* Google Reviews Badge */
+        .google-reviews-badge{background:var(--white);padding:3rem;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,.1);max-width:600px;margin:3rem auto;text-align:center;display:flex;align-items:center;justify-content:center;gap:2rem}
+        .google-logo{flex-shrink:0}
+        .google-rating-info{text-align:left}
+        .rating-number{font-size:4rem;font-weight:700;color:var(--secondary-color);line-height:1;margin-bottom:.5rem}
+        .rating-stars-large{font-size:1.8rem;margin-bottom:.5rem}
+        .rating-count{color:var(--text-light);font-size:1.1rem;margin-bottom:1rem}
+        .btn-google{background:#4285f4;color:var(--white);padding:.8rem 1.5rem;border-radius:30px;text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:.5rem;transition:var(--transition);margin-top:.5rem}
+        .btn-google:hover{background:#3367d6;transform:translateY(-2px);box-shadow:0 5px 20px rgba(66,133,244,.3)}
+        
+        /* Google Rating in Hero */
+        .google-rating-hero{background:var(--light-bg);padding:1rem 2rem;border-radius:50px;display:inline-flex;align-items:center;gap:1rem;margin:1.5rem 0;box-shadow:0 5px 20px rgba(212,165,165,.3);border:2px solid var(--primary-color)}
+        .rating-stars{font-size:1.3rem}
+        .rating-text{color:var(--text-dark);font-size:1rem;font-weight:500}
+        
+        /* Testimonials Grid */
+        .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem;max-width:1200px;margin-left:auto;margin-right:auto}
+        .testimonial-card{background:var(--white);padding:2rem;border-radius:15px;box-shadow:0 5px 25px rgba(0,0,0,.08);transition:var(--transition)}
+        .testimonial-card:hover{transform:translateY(-5px);box-shadow:0 10px 35px rgba(0,0,0,.12)}
+        .testimonial-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.5rem}
+        .google-icon{color:#4285f4;font-size:1.5rem}
+        .testimonial-text{font-size:1rem;font-style:italic;color:var(--text-light);margin-bottom:1.5rem;line-height:1.8}
+        .testimonial-author{font-weight:600;color:var(--secondary-color);font-size:1rem}
+        .stars{color:#fbbf24;font-size:1rem}
+        .contact-content{display:grid;grid-template-columns:1fr 1fr;gap:4rem}
+        .contact-info{background:var(--light-bg);padding:3rem;border-radius:15px}
+        .contact-info h3{font-size:2rem;margin-bottom:2rem;color:var(--secondary-color)}
+        .info-item{display:flex;align-items:flex-start;gap:1.5rem;margin-bottom:2rem}
+        .info-icon{width:50px;height:50px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary-color);font-size:1.3rem;flex-shrink:0}
+        .info-text h4{font-size:1.2rem;margin-bottom:.5rem;color:var(--secondary-color)}
+        .info-text p{color:var(--text-light)}
+        .contact-form{display:flex;flex-direction:column;gap:1.5rem}
+        .form-group{display:flex;flex-direction:column;gap:.5rem}
+        .form-group label{font-weight:500;color:var(--text-dark)}
+        .form-group input,.form-group textarea{padding:1rem;border:2px solid var(--light-bg);border-radius:10px;font-family:Montserrat,sans-serif;font-size:1rem;transition:var(--transition)}
+        .form-group input:focus,.form-group textarea:focus{outline:0;border-color:var(--primary-color)}
+        .form-group textarea{min-height:150px;resize:vertical}
+        .map-container{margin-top:3rem;border-radius:15px;overflow:hidden;height:400px}
+        .map-container iframe{width:100%;height:100%;border:none}
+        footer{background:var(--secondary-color);color:var(--white);padding:4rem 5%;text-align:center}
+        .footer-content{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:3rem;text-align:left}
+        .footer-section h3{font-size:1.5rem;margin-bottom:1.5rem;color:var(--primary-color)}
+        .footer-section a,.footer-section p{color:rgba(255,255,255,.8);text-decoration:none;display:block;margin-bottom:.8rem;transition:var(--transition)}
+        .footer-section a:hover{color:var(--primary-color)}
+        .social-links{display:flex;gap:1rem;margin-top:1rem}
+        .social-links a{width:40px;height:40px;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:var(--transition)}
+        .social-links a:hover{background:var(--primary-color);transform:translateY(-3px)}
+        .footer-google-rating{background:rgba(255,255,255,0.1);padding:1rem;border-radius:10px;margin:1rem 0;text-align:center}
+        .footer-stars{font-size:1.2rem;margin-bottom:0.5rem}
+        .footer-bottom{margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;color:rgba(255,255,255,.6)}
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float{position:fixed;bottom:30px;right:30px;z-index:1000;transition:all 0.3s ease;animation:fadeInUp 1s ease 0.5s both}
+        .whatsapp-button{width:65px;height:65px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(37,211,102,0.4);text-decoration:none;transition:all 0.3s ease;position:relative}
+        .whatsapp-button::before{content:'';position:absolute;top:-5px;right:-5px;bottom:-5px;left:-5px;border-radius:50%;border:2px solid rgba(37,211,102,0.5);animation:pulse-ring 2s cubic-bezier(0.215,0.61,0.355,1) infinite}
+        .whatsapp-button i{color:var(--white);font-size:2rem;transition:transform 0.3s ease}
+        .whatsapp-button:hover{transform:scale(1.1);box-shadow:0 12px 40px rgba(37,211,102,0.6)}
+        .whatsapp-button:hover i{transform:scale(1.1)}
+        .whatsapp-tooltip{position:absolute;right:80px;top:50%;transform:translateY(-50%);background:var(--white);color:var(--text-dark);padding:0.8rem 1.5rem;border-radius:25px;font-size:0.9rem;font-weight:500;white-space:nowrap;box-shadow:0 4px 15px rgba(0,0,0,0.15);opacity:0;visibility:hidden;transition:all 0.3s ease}
+        .whatsapp-float:hover .whatsapp-tooltip{opacity:1;visibility:visible;right:85px}
+        
+        @keyframes pulse-ring{0%{transform:scale(0.95);opacity:0.8}50%{transform:scale(1.05);opacity:0.4}100%{transform:scale(0.95);opacity:0.8}}
+        
+        /* Email Popup */
+        .email-popup-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.75);z-index:2000;display:none;align-items:center;justify-content:center;backdrop-filter:blur(5px);animation:fadeIn 0.3s ease}
+        .email-popup-overlay.active{display:flex}
+        .email-popup{background:var(--white);border-radius:20px;max-width:500px;width:90%;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:slideInUp 0.5s ease}
+        .popup-close{position:absolute;top:15px;right:15px;width:35px;height:35px;border:none;background:rgba(0,0,0,0.1);color:var(--text-dark);font-size:1.5rem;cursor:pointer;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:var(--transition);z-index:1}
+        .popup-close:hover{background:var(--primary-color);color:var(--white);transform:rotate(90deg)}
+        .popup-header{background:linear-gradient(135deg,var(--primary-color),var(--accent-color));padding:3rem 2rem;text-align:center;color:var(--white);position:relative}
+        .popup-header::before{content:'';position:absolute;top:-50%;right:-20%;width:200px;height:200px;background:rgba(255,255,255,0.1);border-radius:50%}
+        .popup-header::after{content:'';position:absolute;bottom:-30%;left:-10%;width:150px;height:150px;background:rgba(255,255,255,0.1);border-radius:50%}
+        .popup-discount{font-size:3.5rem;font-weight:700;margin-bottom:0.5rem;text-shadow:0 4px 10px rgba(0,0,0,0.2);position:relative;z-index:1}
+        .popup-title{font-size:1.8rem;margin-bottom:0.5rem;font-family:'Cormorant Garamond',serif;position:relative;z-index:1}
+        .popup-subtitle{font-size:1rem;opacity:0.95;position:relative;z-index:1}
+        .popup-body{padding:2rem}
+        .popup-text{text-align:center;color:var(--text-light);margin-bottom:1.5rem;font-size:1rem;line-height:1.6}
+        .popup-form{display:flex;flex-direction:column;gap:1rem}
+        .popup-input{padding:1rem;border:2px solid var(--light-bg);border-radius:10px;font-size:1rem;font-family:Montserrat,sans-serif;transition:var(--transition)}
+        .popup-input:focus{outline:none;border-color:var(--primary-color);box-shadow:0 0 0 3px rgba(212,165,165,0.1)}
+        .popup-submit{background:var(--primary-color);color:var(--white);padding:1rem 2rem;border:none;border-radius:10px;font-size:1.1rem;font-weight:600;cursor:pointer;transition:var(--transition);font-family:Montserrat,sans-serif}
+        .popup-submit:hover{background:var(--accent-color);transform:translateY(-2px);box-shadow:0 5px 20px rgba(196,139,159,0.4)}
+        .popup-footer{text-align:center;padding:0 2rem 2rem;font-size:0.85rem;color:var(--text-light)}
+        .popup-footer a{color:var(--primary-color);text-decoration:none;font-weight:500}
+        .popup-footer a:hover{text-decoration:underline}
+        
+        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+        @keyframes slideInUp{from{opacity:0;transform:translateY(50px) scale(0.9)}to{opacity:1;transform:translateY(0) scale(1)}}
+        
+        /* Language Switcher */
+        .language-switcher{display:flex;align-items:center;gap:0.5rem;margin-left:1rem}
+        .lang-btn{background:transparent;border:2px solid var(--primary-color);color:var(--primary-color);padding:0.4rem 0.8rem;border-radius:20px;cursor:pointer;font-weight:500;font-size:0.85rem;transition:var(--transition);display:flex;align-items:center;gap:0.3rem;font-family:Montserrat,sans-serif}
+        .lang-btn:hover{background:var(--primary-color);color:var(--white)}
+        .lang-btn.active{background:var(--primary-color);color:var(--white)}
+        .lang-btn img{width:18px;height:18px;border-radius:50%;object-fit:cover}
+        
+        /* Cookie Banner (RGPD/GDPR Obligatorio) */
+        .cookie-banner{position:fixed;bottom:0;left:0;right:0;background:var(--white);box-shadow:0 -5px 25px rgba(0,0,0,0.15);padding:1.5rem 2rem;z-index:9999;display:none;animation:slideInUp 0.5s ease}
+        .cookie-banner.active{display:block}
+        .cookie-content{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+        .cookie-text{flex:1;min-width:300px}
+        .cookie-text h4{color:var(--secondary-color);margin-bottom:0.5rem;font-size:1.1rem}
+        .cookie-text p{color:var(--text-light);font-size:0.9rem;margin:0}
+        .cookie-text a{color:var(--primary-color);text-decoration:underline}
+        .cookie-buttons{display:flex;gap:1rem;flex-wrap:wrap}
+        .cookie-btn{padding:0.8rem 1.5rem;border:none;border-radius:25px;cursor:pointer;font-weight:600;font-family:Montserrat,sans-serif;transition:var(--transition);font-size:0.9rem}
+        .cookie-btn-accept{background:var(--primary-color);color:var(--white)}
+        .cookie-btn-accept:hover{background:var(--accent-color);transform:translateY(-2px);box-shadow:0 5px 15px rgba(212,165,165,0.4)}
+        .cookie-btn-reject{background:var(--light-bg);color:var(--text-dark)}
+        .cookie-btn-reject:hover{background:#e0dbd7}
+        .cookie-btn-settings{background:transparent;color:var(--text-light);text-decoration:underline;padding:0.8rem 1rem}
+        .cookie-btn-settings:hover{color:var(--primary-color)}
+        .blog-card{background:var(--white);padding:2rem;border-radius:15px;box-shadow:0 5px 25px rgba(0,0,0,.08);transition:var(--transition);text-decoration:none;color:var(--text-dark);display:block}
+        .blog-card:hover{transform:translateY(-5px);box-shadow:0 10px 40px rgba(0,0,0,.12)}
+        .blog-card h3{color:var(--secondary-color);margin-bottom:1rem;font-size:1.5rem}
+        .blog-card p{color:var(--text-light);margin-bottom:1.5rem}
+        .blog-meta{font-size:.9rem;color:var(--primary-color);font-weight:500}
+        
+        /* NUEVOS ESTILOS PARA PORTFOLIO DE EXTENSIONES DE PESTAÑAS */
+        .lashes-portfolio,
+        .microblading-portfolio {
+            background: var(--white);
+            padding: 5rem 5%;
+        }
+        
+        .microblading-portfolio {
+            background: var(--light-bg);
+        }
+        
+        .portfolio-categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn,
+        .category-btn-micro {
+            padding: 0.8rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        .category-btn.active,
+        .category-btn:hover,
+        .category-btn-micro.active,
+        .category-btn-micro:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            justify-items: center;
+            align-items: start;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Mejor centrado cuando hay pocos items */
+        @media (min-width: 1000px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, minmax(320px, 450px));
+                justify-content: center;
+            }
+        }
+        
+        @media (min-width: 768px) and (max-width: 999px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, minmax(320px, 450px));
+                justify-content: center;
+            }
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.5s ease;
+            cursor: pointer;
+            background: var(--white);
+            width: 100%;
+            max-width: 450px;
+        }
+        
+        .portfolio-item.hidden {
+            display: none;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        
+        .portfolio-item:not(.hidden):hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .portfolio-item:not(.hidden) {
+            animation: fadeInScale 0.5s ease forwards;
+        }
+        
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .portfolio-image {
+            position: relative;
+            height: 380px;
+            overflow: hidden;
+            background: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .portfolio-image img,
+        .portfolio-image video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-image img,
+        .portfolio-item:hover .portfolio-image video {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(26,26,26,0.9), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            color: var(--white);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .portfolio-description {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        .portfolio-info {
+            padding: 1.5rem;
+            background: var(--white);
+        }
+        
+        .portfolio-info h4 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .portfolio-info p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .portfolio-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background: var(--light-bg);
+            color: var(--text-dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+        
+        /* Before/After Comparisons */
+        .before-after-section {
+            padding: 5rem 5%;
+            background: var(--light-bg);
+        }
+        
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .before-after-item {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .before-after-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+        }
+        
+        .before-after-images:has(.full-width-ba) {
+            grid-template-columns: 1fr;
+        }
+        
+        .before-after-image {
+            height: 250px;
+            background: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .before-after-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .full-width-ba {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .full-width-ba img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+        
+        .image-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        .before-after-info {
+            padding: 1.5rem;
+        }
+        
+        .before-after-info h4 {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .before-after-info p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+        
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+        }
+        
+        .lightbox-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        
+        /* Placeholder text for images */
+        .image-placeholder {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+        
+        @media(max-width:1200px){
+            .nav-links{gap:1.2rem}
+            .nav-links a{font-size:.85rem}
+            .btn-primary{padding:.7rem 1.5rem;font-size:.9rem}
+        }
+        
+        @media(max-width:968px){
+            nav{padding:0.8rem 3%}
+            .logo img{height:55px;width:55px}
+            .logo-text{font-size:1.3rem}
+            .logo-text span{font-size:.75rem}
+            .nav-links{position:fixed;left:-100%;top:75px;flex-direction:column;background:var(--white);width:100%;text-align:center;transition:var(--transition);box-shadow:0 10px 27px rgba(0,0,0,.05);padding:2rem 0;gap:1rem}
+            .nav-links.active{left:0}
+            .nav-links a{font-size:1rem}
+            .menu-toggle{display:block}
+            .hero{height:80vh}
+            .hero-content{padding:2rem;border-radius:20px}
+            .hero h1{font-size:2.5rem}
+            .hero p{font-size:1.1rem}
+            .section-title h2{font-size:2rem}
+            .about-content,.contact-content{grid-template-columns:1fr}
+            .features{grid-template-columns:1fr}
+            .portfolio-grid, .before-after-grid {grid-template-columns: 1fr}
+            .before-after-images {grid-template-columns: 1fr}
+            .portfolio-grid {
+                max-width: 500px;
+                justify-content: center;
+            }
+        }
+        
+        @media(max-width:480px){
+            section{padding:3rem 5%}
+            .hero{height:70vh}
+            .hero-content{padding:1.5rem;border-radius:15px}
+            .hero h1{font-size:1.8rem}
+            .hero p{font-size:0.95rem}
+            .services-grid{grid-template-columns:1fr}
+            .before-after-image {height: 200px}
+            .portfolio-grid {
+                padding: 0;
+            }
+            .full-width-ba {
+                min-height: 200px;
+            }
+            .before-after-grid {
+                gap: 2rem;
+            }
+            .google-reviews-badge{flex-direction:column;padding:2rem;gap:1rem}
+            .google-rating-info{text-align:center}
+            .rating-number{font-size:3rem}
+            .google-rating-hero{flex-direction:column;padding:.8rem 1.5rem;gap:.5rem}
+            .rating-stars{font-size:1.1rem}
+            .rating-text{font-size:.9rem}
+            .testimonials-grid{grid-template-columns:1fr}
+            .whatsapp-float{bottom:20px;right:20px}
+            .whatsapp-button{width:55px;height:55px}
+            .whatsapp-button i{font-size:1.6rem}
+            .whatsapp-tooltip{display:none}
+            .popup-header{padding:2rem 1.5rem}
+            .popup-discount{font-size:2.5rem}
+            .popup-title{font-size:1.4rem}
+            .popup-subtitle{font-size:0.9rem}
+            .popup-body{padding:1.5rem}
+            .popup-text{font-size:0.9rem}
+            .language-switcher{margin-left:0;margin-top:1rem;justify-content:center}
+            .cookie-content{flex-direction:column;text-align:center}
+            .cookie-buttons{width:100%;justify-content:center}
+            .cookie-btn{flex:1;min-width:120px}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <img src="Imagenes/Logo/Logo.jpg" alt="BeautyBox Málaga Logo" onerror="this.style.display='none'">
+                <div class="logo-text">BeautyBox<span>Lashes & Brows</span></div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio" data-en="Home">Inicio</a></li>
+                <li><a href="#servicios" data-en="Services">Servicios</a></li>
+                <li><a href="#portfolio-pestanas" data-en="Lash Portfolio">Portfolio Pestañas</a></li>
+                <li><a href="#portfolio-microblading" data-en="Brow Portfolio">Portfolio Cejas</a></li>
+                <li><a href="#galeria" data-en="Gallery">Galería</a></li>
+                <li><a href="#blog" data-en="Blog">Blog</a></li>
+                <li><a href="#nosotros" data-en="About Us">Nosotros</a></li>
+                <li><a href="#contacto" data-en="Contact">Contacto</a></li>
+                <li><a href="reservar-cita.html" class="btn-primary" id="navBookBtn" data-en="Book Appointment">Reservar Cita</a></li>
+                <li class="language-switcher">
+                    <button class="lang-btn active" onclick="switchLanguage('es')" id="langEs">🇪🇸 ES</button>
+                    <button class="lang-btn" onclick="switchLanguage('en')" id="langEn">🇬🇧 EN</button>
+                </li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="Imagenes/servicios/Portada extensiones de pestanas.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 id="heroTitle" data-en="Enhancing your natural beauty in the heart of Málaga">Realzando tu belleza natural en el corazón de Málaga</h1>
+            <p id="heroSubtitle" data-en="Specialists in lash extensions, brow design and professional beauty treatments">Especialistas en diseño de pestañas, cejas y manicura con técnicas de última generación</p>
+            <div class="google-rating-hero">
+                <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+                <div class="rating-text"><strong>4.9/5</strong> <span data-en="based on">basado en</span> <a href="https://maps.app.goo.gl/MQveqQVp2K6LsMCS6" target="_blank" style="color: inherit; text-decoration: underline;"><span data-en="60 Google reviews">60 reseñas de Google</span></a></div>
+            </div>
+            <div class="hero-buttons">
+                <a href="reservar-cita.html" class="btn-primary" id="heroBookBtn" data-en="Book Your Appointment Now">Reserva tu Cita Ahora</a>
+                <a href="#servicios" class="btn-secondary" data-en="View Services">Ver Servicios</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ORIGINAL DE SERVICIOS -->
+    <section id="servicios">
+        <div class="section-title">
+            <h2 data-en="Our Services">Nuestros Servicios</h2>
+            <p data-en="Discover our wide range of specialized beauty treatments">Descubre nuestra amplia gama de tratamientos de belleza especializados</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-image">
+                    <video autoplay loop muted playsinline>
+                        <source src="Imagenes/servicios/Portada extensiones de pestanas.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="service-content">
+                    <h3 data-en="Lash Extensions">Extensiones de Pestañas</h3>
+                    <p data-en="Enhance your look with customized lash extensions. We offer classic, volume and mega volume styles adapted to your style.">Realza tu mirada con extensiones de pestañas personalizadas. Ofrecemos estilos clásico, volumen y mega volumen adaptados a tu estilo.</p>
+                    <p class="service-price">45€ - 80€</p>
+                    <a href="https://wa.me/34642841932?text=Hola!%20Me%20interesan%20las%20*Extensiones%20de%20Pesta%C3%B1as*.%20%C2%BFCu%C3%A1ndo%20tienen%20disponibilidad%3F" target="_blank" class="btn-primary service-book-btn" data-service="Extensiones de Pestañas" data-service-en="Lash Extensions" data-en="Book Now">Reservar</a>
+                </div>
+            </div>
+            <div class="service-card" onclick="window.location.href='extensiones-hibridas.html'">
+                <div class="service-image" style="background-image:url('Imagenes/Extensiones de Pestañas/Gray Minimalist Skincare Before and After Instagram Story_20241120_205516_0000.png'); background-size: 60%; background-position: center;">
+                    <span class="info-badge"><i class="fas fa-info-circle"></i> Más Info</span>
+                </div>
+                <div class="service-content">
+                    <h3>Extensiones Híbridas</h3>
+                    <p>El equilibrio perfecto entre naturalidad y volumen. Combina técnicas clásica y volumen ruso para un resultado espectacular.</p>
+                    <p class="service-price">55€</p>
+                    <a href="extensiones-hibridas.html" class="btn-primary"><i class="fas fa-arrow-right"></i> Ver Detalles</a>
+                </div>
+            </div>
+            <div class="service-card" onclick="window.location.href='lifting-pestanas.html'">
+                <div class="service-image" style="background-image:url('Imagenes/servicios/Portada lifting de pestañas.png')">
+                    <span class="info-badge"><i class="fas fa-info-circle"></i> Más Info</span>
+                </div>
+                <div class="service-content">
+                    <h3>Lifting de Pestañas</h3>
+                    <p>Dale curvatura y volumen natural a tus pestañas durante 6-8 semanas. Ideal para un look natural y sin mantenimiento.</p>
+                    <p class="service-price">45€</p>
+                    <a href="lifting-pestanas.html" class="btn-primary"><i class="fas fa-arrow-right"></i> Ver Detalles</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image:url('Imagenes/servicios/Laminado_de_cejas.png')"></div>
+                <div class="service-content">
+                    <h3>Laminado de Cejas</h3>
+                    <p>Cejas perfectamente peinadas y con efecto lifting que dura hasta 8 semanas. El tratamiento más demandado del momento.</p>
+                    <p class="service-price">45€</p>
+                    <a href="https://wa.me/34642841932?text=Hola!%20Me%20interesa%20el%20*Laminado%20de%20Cejas*.%20%C2%BFCu%C3%A1ndo%20tienen%20disponibilidad%3F" target="_blank" class="btn-primary">Reservar</a>
+                </div>
+            </div>
+            <div class="service-card" onclick="window.location.href='nanoblading.html'">
+                <div class="service-image" style="background-image:url('Imagenes/servicios/Portada micropigmentación de cejas.png')">
+                    <span class="info-badge"><i class="fas fa-info-circle"></i> Más Info</span>
+                </div>
+                <div class="service-content">
+                    <h3>Nanoblading</h3>
+                    <p>La técnica más avanzada de micropigmentación. Trazos ultra finos para cejas perfectamente naturales que duran 12-18 meses.</p>
+                    <p class="service-price">Desde 200€</p>
+                    <a href="nanoblading.html" class="btn-primary"><i class="fas fa-arrow-right"></i> Ver Detalles</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image:url('Imagenes/servicios/Portada microblading.png')"></div>
+                <div class="service-content">
+                    <h3>Microblading</h3>
+                    <p>Técnica de micropigmentación para crear cejas hiperrealistas pelo a pelo. Resultados naturales que duran hasta 18 meses.</p>
+                    <p class="service-price">Desde 250€</p>
+                    <a href="https://wa.me/34642841932?text=Hola!%20Me%20interesa%20el%20*Microblading*.%20%C2%BFCu%C3%A1ndo%20tienen%20disponibilidad%3F" target="_blank" class="btn-primary">Reservar</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image:url('Imagenes/Laminado de Cejas/Beige Minimalist Skincare Before and After Instagram Post_20241112_114659_0000.png')"></div>
+                <div class="service-content">
+                    <h3>Henna y Visagismo</h3>
+                    <p>Diseño de cejas personalizado según las proporciones de tu rostro, con tinte de henna 100% natural.</p>
+                    <p class="service-price">30€</p>
+                    <a href="https://wa.me/34642841932?text=Hola!%20Me%20interesa%20*Henna%20y%20Visagismo*.%20%C2%BFCu%C3%A1ndo%20tienen%20disponibilidad%3F" target="_blank" class="btn-primary">Reservar</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-image" style="background-image:url('Imagenes/servicios/Portada micropigmentación de labios.png'); background-size: 65%; background-position: center;"></div>
+                <div class="service-content">
+                    <h3>Micropigmentación de Labios</h3>
+                    <p>Da color y definición a tus labios con una técnica permanente que realza tu belleza natural. Resultados que duran 12-18 meses.</p>
+                    <p class="service-price">Desde 350€</p>
+                    <a href="https://wa.me/34642841932?text=Hola!%20Me%20interesa%20la%20*Micropigmentaci%C3%B3n%20de%20Labios*.%20%C2%BFCu%C3%A1ndo%20tienen%20disponibilidad%3F" target="_blank" class="btn-primary">Reservar</a>
+                </div>
+            </div>
+            <div class="service-card" onclick="window.location.href='depilacion-hilo.html'">
+                <div class="service-image" style="background-image:url('Imagenes/servicios/depilacion-en-hilo2.jpg')">
+                    <span class="info-badge"><i class="fas fa-info-circle"></i> Más Info</span>
+                </div>
+                <div class="service-content">
+                    <h3>Depilación con Hilo</h3>
+                    <p>Técnica milenaria 100% natural para diseñar cejas perfectas con máxima precisión. Ideal para pieles sensibles.</p>
+                    <p class="service-price">12€</p>
+                    <a href="depilacion-hilo.html" class="btn-primary"><i class="fas fa-arrow-right"></i> Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: PORTFOLIO DE EXTENSIONES DE PESTAÑAS -->
+    <section class="lashes-portfolio" id="portfolio-pestanas">
+        <div class="section-title">
+            <h2>Portfolio de Extensiones de Pestañas</h2>
+            <p>Descubre nuestros trabajos reales y encuentra el estilo perfecto para ti</p>
+        </div>
+        
+        <div class="portfolio-categories">
+            <button class="category-btn active" data-category="all">Todos los Estilos</button>
+            <button class="category-btn" data-category="clasico">Clásico</button>
+            <button class="category-btn" data-category="volumen">Volumen</button>
+            <button class="category-btn" data-category="mega">Mega Volumen</button>
+            <button class="category-btn" data-category="hibrido">Híbrido</button>
+        </div>
+        
+        <div class="portfolio-grid">
+            <!-- Ejemplo 1: Extensiones Clásicas -->
+            <div class="portfolio-item" data-category="clasico">
+                <div class="portfolio-image">
+                    <img src="Imagenes/Extensiones de Pestañas/20250206_111745.jpg" alt="Extensiones Clásicas - Look Natural">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Look Natural Clásico</h3>
+                        <p class="portfolio-description">Perfecto para el día a día</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Extensiones Clásicas</h4>
+                    <p>Técnica: 1:1 (una extensión por pestaña natural)</p>
+                    <p>Longitud: 9-12mm mixta</p>
+                    <p>Curvatura: C</p>
+                    <p>Tiempo: 2 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Natural</span>
+                        <span class="tag">Diario</span>
+                        <span class="tag">Elegante</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ejemplo 2: Volumen Ruso -->
+            <div class="portfolio-item" data-category="volumen">
+                <div class="portfolio-image">
+                    <video autoplay loop muted playsinline>
+                        <source src="Imagenes/Extensiones de Pestañas/Pestañas_20250106_094549_0001.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Volumen Ruso 3D</h3>
+                        <p class="portfolio-description">Mirada intensa y sofisticada</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Volumen Ruso 3D</h4>
+                    <p>Técnica: 3-5 extensiones por pestaña</p>
+                    <p>Longitud: 10-14mm</p>
+                    <p>Curvatura: D</p>
+                    <p>Tiempo: 3 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Volumen</span>
+                        <span class="tag">Dramático</span>
+                        <span class="tag">Eventos</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ejemplo 3: Mega Volumen -->
+            <div class="portfolio-item" data-category="mega">
+                <div class="portfolio-image">
+                    <img src="Imagenes/Extensiones de Pestañas/Beige Minimalist Skincare Before and After Instagram Post_20241009_203612_0000.png" alt="Mega Volumen - Antes y Después">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Mega Volumen 6D</h3>
+                        <p class="portfolio-description">Máximo impacto y glamour</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Mega Volumen 6D</h4>
+                    <p>Técnica: 6-10 extensiones ultrafinas</p>
+                    <p>Longitud: 12-15mm</p>
+                    <p>Curvatura: CC</p>
+                    <p>Tiempo: 3.5 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Mega Volumen</span>
+                        <span class="tag">Glamour</span>
+                        <span class="tag">Impactante</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ejemplo 4: Híbrido -->
+            <div class="portfolio-item" data-category="hibrido">
+                <div class="portfolio-image">
+                    <video autoplay loop muted playsinline>
+                        <source src="Imagenes/Extensiones de Pestañas/italian summer_20250420_121559_0001.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Estilo Híbrido</h3>
+                        <p class="portfolio-description">El equilibrio perfecto</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Extensiones Híbridas</h4>
+                    <p>Técnica: Combinación clásico + volumen</p>
+                    <p>Longitud: 10-13mm</p>
+                    <p>Curvatura: C/D mixta</p>
+                    <p>Tiempo: 2.5 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Híbrido</span>
+                        <span class="tag">Versátil</span>
+                        <span class="tag">Popular</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ejemplo 5: Cat Eye -->
+            <div class="portfolio-item" data-category="clasico">
+                <div class="portfolio-image">
+                    <img src="Imagenes/Extensiones de Pestañas/Foxy eye Mezcla de curvaturas naturales como la cc y c, con curvatutas más _20250118_133040_0000.png" alt="Cat Eye - Foxy Eye Effect">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Cat Eye Clásico</h3>
+                        <p class="portfolio-description">Efecto lifting natural</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Cat Eye Effect</h4>
+                    <p>Técnica: Diseño ascendente</p>
+                    <p>Longitud: 8-14mm progresiva</p>
+                    <p>Curvatura: L/D</p>
+                    <p>Tiempo: 2.5 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Cat Eye</span>
+                        <span class="tag">Lifting</span>
+                        <span class="tag">Elegante</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ejemplo 6: Wet Look -->
+            <div class="portfolio-item" data-category="volumen">
+                <div class="portfolio-image">
+                    <video autoplay loop muted playsinline>
+                        <source src="Imagenes/Extensiones de Pestañas/Extensiones de pestañas_20250423_105621_0001.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Wet Look</h3>
+                        <p class="portfolio-description">Efecto pestañas húmedas</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Wet Effect</h4>
+                    <p>Técnica: Agrupaciones definidas</p>
+                    <p>Longitud: 11-13mm</p>
+                    <p>Curvatura: B/C</p>
+                    <p>Tiempo: 3 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Wet Look</span>
+                        <span class="tag">Tendencia</span>
+                        <span class="tag">Moderno</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: ANTES/DESPUÉS -->
+    <section class="before-after-section" id="antes-despues">
+        <div class="section-title">
+            <h2>Transformaciones Reales</h2>
+            <p>Mira los increíbles resultados de nuestros tratamientos</p>
+        </div>
+        
+        <div class="before-after-grid">
+            <div class="before-after-item">
+                <div class="before-after-images">
+                    <div class="before-after-image full-width-ba">
+                        <img src="Imagenes/Extensiones de Pestañas/Beige Minimalist Skincare Before and After Instagram Post_20241009_203612_0000.png" alt="Antes y Después - Extensiones de Pestañas">
+                    </div>
+                </div>
+                <div class="before-after-info">
+                    <h4>Volumen Ruso 4D</h4>
+                    <p>Transformación completa con extensiones de volumen ruso. Pestañas escasas convertidas en una mirada impactante.</p>
+                    <p><strong>Duración del tratamiento:</strong> 3 horas</p>
+                    <p><strong>Duración del resultado:</strong> 3-4 semanas</p>
+                </div>
+            </div>
+            
+            <div class="before-after-item">
+                <div class="before-after-images">
+                    <div class="before-after-image full-width-ba">
+                        <img src="Imagenes/Microblading/Beige Brown Minimalist Beauty Before After Instagram Story_20241127_153658_0000.png" alt="Antes y Después - Nanoblading">
+                    </div>
+                </div>
+                <div class="before-after-info">
+                    <h4>Nanoblading Natural</h4>
+                    <p>Transformación de cejas con nanoblading. Técnica ultra precisa para cejas perfectamente naturales y simétricas.</p>
+                    <p><strong>Duración del tratamiento:</strong> 2.5 horas</p>
+                    <p><strong>Duración del resultado:</strong> 12-18 meses</p>
+                </div>
+            </div>
+            
+            <div class="before-after-item">
+                <div class="before-after-images">
+                    <div class="before-after-image full-width-ba">
+                        <img src="Imagenes/Extensiones de Pestañas/Gray Minimalist Skincare Before and After Instagram Story_20241120_205516_0000.png" alt="Antes y Después - Extensiones Híbridas">
+                    </div>
+                </div>
+                <div class="before-after-info">
+                    <h4>Extensiones Híbridas</h4>
+                    <p>Combinación perfecta de técnicas clásica y volumen para una mirada natural pero impactante. Pestañas más densas y definidas.</p>
+                    <p><strong>Duración del tratamiento:</strong> 2.5 horas</p>
+                    <p><strong>Duración del resultado:</strong> 3-4 semanas</p>
+                </div>
+            </div>
+            
+            <div class="before-after-item">
+                <div class="before-after-images">
+                    <div class="before-after-image full-width-ba">
+                        <img src="Imagenes/Microblading/Beige Minimalist Skincare Before and After Instagram Post_20241103_115522_0000.png" alt="Antes y Después - Powder Brows">
+                    </div>
+                </div>
+                <div class="before-after-info">
+                    <h4>Powder Brows</h4>
+                    <p>Técnica de sombreado para cejas con efecto maquillado suave y natural. Ideal para todo tipo de pieles.</p>
+                    <p><strong>Duración del tratamiento:</strong> 2.5 horas</p>
+                    <p><strong>Duración del resultado:</strong> 12-18 meses</p>
+                </div>
+            </div>
+            
+            <div class="before-after-item">
+                <div class="before-after-images">
+                    <div class="before-after-image full-width-ba">
+                        <img src="Imagenes/Laminado de Cejas/Beige Minimalist Skincare Before and After Instagram Post_20241112_114659_0000.png" alt="Antes y Después - Laminado de Cejas">
+                    </div>
+                </div>
+                <div class="before-after-info">
+                    <h4>Laminado de Cejas</h4>
+                    <p>Transformación instantánea con efecto lifting. Cejas perfectamente peinadas hacia arriba para un look más juvenil y definido.</p>
+                    <p><strong>Duración del tratamiento:</strong> 1 hora</p>
+                    <p><strong>Duración del resultado:</strong> 6-8 semanas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA SECCIÓN: PORTFOLIO DE MICROBLADING/NANOBLADING -->
+    <section class="microblading-portfolio" id="portfolio-microblading">
+        <div class="section-title">
+            <h2>Portfolio de Microblading y Nanoblading</h2>
+            <p>Cejas perfectas y naturales diseñadas para ti</p>
+        </div>
+        
+        <div class="portfolio-categories">
+            <button class="category-btn-micro active" data-category-micro="all">Todos los Estilos</button>
+            <button class="category-btn-micro" data-category-micro="nanoblading">Nanoblading</button>
+            <button class="category-btn-micro" data-category-micro="powder">Powder Brows</button>
+            <button class="category-btn-micro" data-category-micro="ombre">Ombré</button>
+            <button class="category-btn-micro" data-category-micro="hiperreal">Hiper Realista</button>
+        </div>
+        
+        <div class="portfolio-grid">
+            <!-- Ejemplo 1: Nanoblading Natural -->
+            <div class="portfolio-item" data-category-micro="nanoblading">
+                <div class="portfolio-image">
+                    <video autoplay loop muted playsinline>
+                        <source src="Imagenes/Microblading/Nanoblading_20250226_082711_0001.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Nanoblading Natural</h3>
+                        <p class="portfolio-description">Pelo a pelo ultra fino</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Nanoblading</h4>
+                    <p>Técnica: Nano agujas ultrafinas</p>
+                    <p>Estilo: Pelo a pelo natural</p>
+                    <p>Duración: 12-18 meses</p>
+                    <p>Tiempo: 2.5 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Natural</span>
+                        <span class="tag">Pelo a Pelo</span>
+                        <span class="tag">Durable</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ejemplo 2: Antes y Después -->
+            <div class="portfolio-item" data-category-micro="nanoblading">
+                <div class="portfolio-image">
+                    <img src="Imagenes/Microblading/Beige Brown Minimalist Beauty Before After Instagram Story_20241127_153658_0000.png" alt="Nanoblading Antes y Después">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Transformación Completa</h3>
+                        <p class="portfolio-description">Antes y después impresionante</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Resultado Natural</h4>
+                    <p>Técnica: Nanoblading + Sombreado</p>
+                    <p>Estilo: Natural con definición</p>
+                    <p>Color: Marrón personalizado</p>
+                    <p>Tiempo: 3 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Antes/Después</span>
+                        <span class="tag">Transformación</span>
+                        <span class="tag">Natural</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ejemplo 3: Powder Brows -->
+            <div class="portfolio-item" data-category-micro="powder">
+                <div class="portfolio-image">
+                    <img src="Imagenes/Microblading/Beige Minimalist Skincare Before and After Instagram Post_20241103_115522_0000.png" alt="Powder Brows">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Powder Brows</h3>
+                        <p class="portfolio-description">Efecto maquillado suave</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Cejas en Polvo</h4>
+                    <p>Técnica: Pixelado/Puntillismo</p>
+                    <p>Estilo: Efecto maquillado natural</p>
+                    <p>Ideal para: Todo tipo de piel</p>
+                    <p>Tiempo: 2.5 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Powder</span>
+                        <span class="tag">Suave</span>
+                        <span class="tag">Versátil</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ejemplo 4: Estilo Ombré -->
+            <div class="portfolio-item" data-category-micro="ombre">
+                <div class="portfolio-image">
+                    <video autoplay loop muted playsinline>
+                        <source src="Imagenes/Microblading/Tu Historia Animada Antes y Después Peluquería Dinámico Marrón Y Amarillo_20241124_122214_0003.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Ombré Shading</h3>
+                        <p class="portfolio-description">Degradado perfecto</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Cejas Ombré</h4>
+                    <p>Técnica: Degradado suave</p>
+                    <p>Estilo: Claro a oscuro</p>
+                    <p>Efecto: 3D profesional</p>
+                    <p>Tiempo: 3 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Ombré</span>
+                        <span class="tag">Degradado</span>
+                        <span class="tag">Moderno</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ejemplo 5: Hiper Realista -->
+            <div class="portfolio-item" data-category-micro="hiperreal">
+                <div class="portfolio-image">
+                    <img src="Imagenes/Microblading/Black and White Fashion and Lifestyle Instagram Story Template with Two Ima_20250422_182546_0000.png" alt="Cejas Hiper Realistas">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Hiper Realista</h3>
+                        <p class="portfolio-description">Imposible distinguir de las naturales</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Técnica Híbrida</h4>
+                    <p>Técnica: Nano + Sombreado</p>
+                    <p>Estilo: Hiper realista 3D</p>
+                    <p>Detalle: Máxima precisión</p>
+                    <p>Tiempo: 3.5 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Hiper Realista</span>
+                        <span class="tag">Premium</span>
+                        <span class="tag">3D</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Ejemplo 6: Resultado Natural -->
+            <div class="portfolio-item" data-category-micro="nanoblading">
+                <div class="portfolio-image">
+                    <video autoplay loop muted playsinline>
+                        <source src="Imagenes/Microblading/Interior Design Promo and Sales Business Instagram Reel in Green Black and _20250128_201400_0001.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Look Fresco</h3>
+                        <p class="portfolio-description">Resultado recién realizado</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Nanoblading Fresh</h4>
+                    <p>Técnica: Nanoblading premium</p>
+                    <p>Resultado: Inmediato</p>
+                    <p>Definición: Alta precisión</p>
+                    <p>Tiempo: 2.5 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Recién Hecho</span>
+                        <span class="tag">Natural</span>
+                        <span class="tag">Definido</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ejemplo 7: Promoción Especial -->
+            <div class="portfolio-item" data-category-micro="nanoblading">
+                <div class="portfolio-image">
+                    <img src="Imagenes/Microblading/150€_20250126_181841_0000.png" alt="Oferta Especial Nanoblading">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Oferta Especial</h3>
+                        <p class="portfolio-description">Consulta nuestras promociones</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Precio Especial</h4>
+                    <p>Nanoblading completo</p>
+                    <p>Incluye: Retoque + cuidados</p>
+                    <p>Consulta disponibilidad</p>
+                    <p>Tiempo: 2.5 horas</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Oferta</span>
+                        <span class="tag">Calidad</span>
+                        <span class="tag">Completo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ejemplo 8: Proceso Detallado -->
+            <div class="portfolio-item" data-category-micro="hiperreal">
+                <div class="portfolio-image">
+                    <video autoplay loop muted playsinline>
+                        <source src="Imagenes/Microblading/Reels para Instagram Agente Inmobiliario Minimalista Beige y Marrón_20240928_200000_0002.mp4" type="video/mp4">
+                    </video>
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Proceso Profesional</h3>
+                        <p class="portfolio-description">Detrás de cámaras</p>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h4>Nuestro Trabajo</h4>
+                    <p>Técnica: Precisión milimétrica</p>
+                    <p>Ambiente: Profesional y limpio</p>
+                    <p>Cuidado: Personalizado</p>
+                    <p>Tiempo: Variable según diseño</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">Profesional</span>
+                        <span class="tag">Proceso</span>
+                        <span class="tag">Higiene</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ORIGINAL: SOBRE NOSOTROS -->
+    <section id="nosotros">
+        <div class="section-title">
+            <h2>Sobre Nosotros</h2>
+            <p>Conoce al equipo detrás de tu belleza</p>
+        </div>
+        <div class="about-content">
+            <div class="about-image"></div>
+            <div class="about-text">
+                <h3>Tu estudio de confianza en Málaga</h3>
+                <p>En BeautyBox Málaga somos especialistas en realzar la belleza natural de cada cliente. Nuestro equipo de profesionales certificadas cuenta con años de experiencia y formación continua en las últimas técnicas internacionales.</p>
+                <p>Ubicados en el corazón de Málaga, en el Distrito Centro, ofrecemos un ambiente elegante, relajante y completamente higienizado donde cada detalle cuenta.</p>
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-certificate"></i></div>
+                        <div><strong>Profesionales Certificadas</strong><p>Formación internacional continua</p></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div><strong>Higiene Total</strong><p>Protocolos de seguridad máximos</p></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-star"></i></div>
+                        <div><strong>Productos Premium</strong><p>Solo las mejores marcas</p></div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                        <div><strong>Horarios Flexibles</strong><p>Adaptados a tu vida</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ORIGINAL: BLOG -->
+    <section id="blog">
+        <div class="section-title">
+            <h2>Blog de Belleza</h2>
+            <p>Consejos, guías y todo sobre micropigmentación y cuidado de cejas</p>
+        </div>
+        <div class="services-grid">
+            <a href="blog/nanoblading-malaga-guia.html" class="blog-card">
+                <h3>Guía Completa de Nanoblading en Málaga</h3>
+                <p>Todo lo que necesitas saber sobre esta técnica revolucionaria: precio, duración, proceso y beneficios.</p>
+                <span class="blog-meta"><i class="fas fa-clock"></i> 8 min lectura</span>
+            </a>
+            <a href="blog/nanoblading-vs-microblading.html" class="blog-card">
+                <h3>Nanoblading vs Microblading</h3>
+                <p>¿Cuál técnica es mejor para ti? Comparación completa con tabla detallada para ayudarte a elegir.</p>
+                <span class="blog-meta"><i class="fas fa-clock"></i> 7 min lectura</span>
+            </a>
+            <a href="blog/cuidados-post-nanoblading.html" class="blog-card">
+                <h3>Cuidados Post-Nanoblading</h3>
+                <p>Guía completa día a día para obtener resultados perfectos que duren 12-18 meses.</p>
+                <span class="blog-meta"><i class="fas fa-clock"></i> 6 min lectura</span>
+            </a>
+            <a href="blog/candidata-nanoblading.html" class="blog-card">
+                <h3>¿Eres Candidata Ideal para Nanoblading?</h3>
+                <p>Descubre si este tratamiento es para ti. Test rápido, contraindicaciones y requisitos.</p>
+                <span class="blog-meta"><i class="fas fa-clock"></i> 6 min lectura</span>
+            </a>
+            <a href="blog/nanoblading-pieles-maduras.html" class="blog-card">
+                <h3>Nanoblading en Pieles Maduras (40+)</h3>
+                <p>La solución perfecta para rejuvenecer tu mirada. Beneficios especiales para pieles maduras.</p>
+                <span class="blog-meta"><i class="fas fa-clock"></i> 7 min lectura</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ORIGINAL: TESTIMONIOS -->
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>Lo que dicen nuestras clientas</h2>
+            <p>Testimonios reales de clientas satisfechas</p>
+        </div>
+        
+        <!-- Google Reviews Badge -->
+        <div class="google-reviews-badge">
+            <div class="google-logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.045 27.2142 24.3525 30 20 30C14.4775 30 10 25.5225 10 20C10 14.4775 14.4775 10 20 10C22.5492 10 24.8683 10.9617 26.6342 12.5325L31.3483 7.81833C28.3717 5.04416 24.39 3.33333 20 3.33333C10.7958 3.33333 3.33334 10.7958 3.33334 20C3.33334 29.2042 10.7958 36.6667 20 36.6667C29.2042 36.6667 36.6667 29.2042 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z" fill="#FFC107"/>
+                    <path d="M5.25497 12.2425L10.7308 16.2583C12.2125 12.59 15.8008 9.99999 20 9.99999C22.5491 9.99999 24.8683 10.9617 26.6341 12.5325L31.3483 7.81833C28.3716 5.04416 24.39 3.33333 20 3.33333C13.5983 3.33333 8.04663 6.94749 5.25497 12.2425Z" fill="#FF3D00"/>
+                    <path d="M20 36.6667C24.305 36.6667 28.2167 35.0192 31.1742 32.34L26.0159 27.975C24.3425 29.2425 22.2625 30 20 30C15.665 30 11.9842 27.2359 10.5975 23.3784L5.16254 27.5659C7.92087 32.9634 13.5225 36.6667 20 36.6667Z" fill="#4CAF50"/>
+                    <path d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.7592 25.1975 27.56 26.805 26.0133 27.9758C26.0142 27.975 26.015 27.975 26.0158 27.9742L31.1742 32.3392C30.8092 32.6708 36.6667 28.3333 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z" fill="#1976D2"/>
+                </svg>
+            </div>
+            <div class="google-rating-info">
+                <div class="rating-number">4.9</div>
+                <div class="rating-stars-large">⭐⭐⭐⭐⭐</div>
+                <div class="rating-count">60 reseñas de Google</div>
+                <a href="https://maps.app.goo.gl/MQveqQVp2K6LsMCS6" target="_blank" class="btn-google">
+                    <i class="fab fa-google"></i> Ver todas las reseñas
+                </a>
+            </div>
+        </div>
+        
+        <!-- Testimonios individuales -->
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="google-icon"><i class="fab fa-google"></i></div>
+                </div>
+                <div class="testimonial-text">"Las mejores extensiones de pestañas que me han hecho nunca. El resultado es espectacular y duran muchísimo. El trato es súper profesional y cercano. ¡Totalmente recomendable!"</div>
+                <div class="testimonial-author">María González</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="google-icon"><i class="fab fa-google"></i></div>
+                </div>
+                <div class="testimonial-text">"Increíble el trabajo de microblading. Llevo 6 meses y las cejas siguen perfectas. Muy profesionales y el estudio impecable."</div>
+                <div class="testimonial-author">Carmen Ruiz</div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <div class="google-icon"><i class="fab fa-google"></i></div>
+                </div>
+                <div class="testimonial-text">"El lifting de pestañas cambió mi rutina de maquillaje. Ahora me levanto lista. Súper recomendable, las chicas son un amor."</div>
+                <div class="testimonial-author">Laura Martín</div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://maps.app.goo.gl/MQveqQVp2K6LsMCS6" target="_blank" class="btn-primary">
+                <i class="fab fa-google"></i> Lee todas nuestras 60 reseñas en Google
+            </a>
+        </div>
+    </section>
+
+    <!-- SECCIÓN ORIGINAL: CONTACTO -->
+    <section id="contacto">
+        <div class="section-title">
+            <h2>Contacto y Ubicación</h2>
+            <p>Visítanos o reserva tu cita ahora</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="info-text"><h4>Dirección</h4><p>Av. del Arroyo de los Ángeles, 5<br>Distrito Centro, 29009 Málaga, España</p></div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-phone"></i></div>
+                    <div class="info-text"><h4>Teléfono</h4><p><a href="tel:+34642841932" style="color: inherit; text-decoration: none;">+34 642 84 19 32</a></p></div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="info-text"><h4>Email</h4><p><a href="mailto:beautyboxmlg@gmail.com" style="color: inherit; text-decoration: none;">beautyboxmlg@gmail.com</a></p></div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-clock"></i></div>
+                    <div class="info-text"><h4>Horario</h4><p>Lunes a Viernes: 10:00 - 20:00<br>Sábado: 10:00 - 14:00</p></div>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com/beautyboxlashes_malaga" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/34642841932" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Envíanos un mensaje</h3>
+                <form>
+                    <div class="form-group"><label>Nombre completo</label><input type="text" placeholder="Tu nombre" required></div>
+                    <div class="form-group"><label>Email</label><input type="email" placeholder="tu@email.com" required></div>
+                    <div class="form-group"><label>Teléfono</label><input type="tel" placeholder="+34 642 84 19 32" required></div>
+                    <div class="form-group"><label>Servicio de interés</label><input type="text" placeholder="¿Qué servicio te interesa?" required></div>
+                    <div class="form-group"><label>Mensaje</label><textarea placeholder="Cuéntanos más sobre lo que necesitas..."></textarea></div>
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.0977969741874!2d-4.432784684770203!3d36.72370197997249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f7b7e3e3e3e3%3A0x3e3e3e3e3e3e3e3!2sAv.%20del%20Arroyo%20de%20los%20%C3%81ngeles%2C%205%2C%2029009%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1234567890123!5m2!1ses!2ses" allowfullscreen loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Lightbox para imágenes ampliadas -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <img src="" alt="Imagen ampliada" id="lightbox-image">
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/34642841932?text=Hola%20BeautyBox!%20Me%20gustar%C3%ADa%20reservar%20una%20cita.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" class="whatsapp-button" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">¡Chatea con nosotros!</span>
+        </a>
+    </div>
+
+    <!-- Cookie Banner (RGPD/GDPR - OBLIGATORIO) -->
+    <div class="cookie-banner" id="cookieBanner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h4><span data-en="🍪 We use cookies">🍪 Usamos cookies</span></h4>
+                <p>
+                    <span data-en="We use our own and third-party cookies to improve your experience and analyze web traffic. By clicking 'Accept All', you consent to the use of all cookies.">Utilizamos cookies propias y de terceros para mejorar tu experiencia y analizar el tráfico web. Al hacer clic en 'Aceptar Todas', consientes el uso de todas las cookies.</span>
+                    <a href="politica-cookies.html" data-en="More information">Más información</a>
+                </p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()" data-en="Reject All">Rechazar Todas</button>
+                <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()" data-en="Accept All">Aceptar Todas</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Email Popup -->
+    <div class="email-popup-overlay" id="emailPopup">
+        <div class="email-popup">
+            <button class="popup-close" onclick="closeEmailPopup()" aria-label="Cerrar popup">&times;</button>
+            <div class="popup-header">
+                <div class="popup-discount">10% OFF</div>
+                <h3 class="popup-title">¡Bienvenida a BeautyBox!</h3>
+                <p class="popup-subtitle">En tu primera visita</p>
+            </div>
+            <div class="popup-body">
+                <p class="popup-text">Suscríbete a nuestra newsletter y recibe un <strong>10% de descuento</strong> en tu primer servicio, además de tips exclusivos de belleza y ofertas especiales.</p>
+                <form class="popup-form" id="emailPopupForm">
+                    <input type="text" class="popup-input" placeholder="Tu nombre" required id="popupName">
+                    <input type="email" class="popup-input" placeholder="Tu email" required id="popupEmail">
+                    <button type="submit" class="popup-submit">¡Quiero mi descuento!</button>
+                </form>
+            </div>
+            <div class="popup-footer">
+                No spam, lo prometemos 💕 | <a href="#" onclick="closeEmailPopup(); return false;">No gracias, prefiero pagar el precio completo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER ORIGINAL -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>BeautyBox Málaga</h3>
+                <p>Tu estudio de belleza especializado en pestañas, cejas y manicura en el centro de Málaga.</p>
+                <div class="footer-google-rating">
+                    <div class="footer-stars">⭐⭐⭐⭐⭐</div>
+                    <p style="margin: 0.5rem 0;"><strong>4.9/5</strong> - 60 reseñas</p>
+                    <a href="https://maps.app.goo.gl/MQveqQVp2K6LsMCS6" target="_blank" style="color: #4285f4; text-decoration: underline;">Ver en Google Maps</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com/beautyboxlashes_malaga" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/34642841932" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <a href="#servicios">Extensiones de Pestañas</a>
+                <a href="extensiones-hibridas.html">Extensiones Híbridas</a>
+                <a href="lifting-pestanas.html">Lifting de Pestañas</a>
+                <a href="#servicios">Laminado de Cejas</a>
+                <a href="nanoblading.html">Nanoblading</a>
+                <a href="#servicios">Microblading</a>
+                <a href="#servicios">Henna y Visagismo</a>
+                <a href="depilacion-hilo.html">Depilación con Hilo</a>
+                <a href="#servicios">Manicura Rusa</a>
+            </div>
+            <div class="footer-section">
+                <h3 data-en="Quick Links">Enlaces</h3>
+                <a href="#inicio" data-en="Home">Inicio</a>
+                <a href="#servicios" data-en="Services">Servicios</a>
+                <a href="#portfolio-pestanas" data-en="Lash Portfolio">Portfolio Pestañas</a>
+                <a href="#portfolio-microblading" data-en="Brow Portfolio">Portfolio Cejas</a>
+                <a href="#blog" data-en="Blog">Blog</a>
+                <a href="#nosotros" data-en="About Us">Nosotros</a>
+                <a href="#contacto" data-en="Contact">Contacto</a>
+            </div>
+            <div class="footer-section">
+                <h3 data-en="Legal">Legal</h3>
+                <a href="politica-privacidad.html" data-en="Privacy Policy">Política de Privacidad</a>
+                <a href="aviso-legal.html" data-en="Legal Notice">Aviso Legal</a>
+                <a href="politica-cookies.html" data-en="Cookie Policy">Política de Cookies</a>
+                <a href="condiciones-servicio.html" data-en="Terms of Service">Condiciones de Servicio</a>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <p>Lunes - Viernes<br>10:00 - 20:00</p>
+                <p>Sábado<br>10:00 - 14:00</p>
+                <p>Domingo<br>Cerrado</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BeautyBox Málaga. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript ORIGINAL mantenido
+        const menuToggle=document.getElementById('menuToggle'),navLinks=document.getElementById('navLinks');
+        menuToggle.addEventListener('click',()=>{navLinks.classList.toggle('active')});
+        document.querySelectorAll('.nav-links a').forEach(link=>{link.addEventListener('click',()=>{navLinks.classList.remove('active')})});
+        window.addEventListener('scroll',()=>{const header=document.querySelector('header');window.scrollY>100?header.style.boxShadow='0 5px 30px rgba(0,0,0,0.1)':header.style.boxShadow='0 2px 20px rgba(0,0,0,0.05)'});
+        document.querySelectorAll('a[href^="#"]').forEach(anchor=>{anchor.addEventListener('click',function(e){e.preventDefault();const target=document.querySelector(this.getAttribute('href'));target&&target.scrollIntoView({behavior:'smooth',block:'start'})})});
+        document.querySelector('form').addEventListener('submit',e=>{e.preventDefault();alert('¡Gracias por tu mensaje! Te contactaremos pronto.')});
+        
+        // NUEVO JavaScript para el portfolio de pestañas
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const portfolioItems = document.querySelectorAll('.lashes-portfolio .portfolio-item');
+        const lashesSection = document.querySelector('.lashes-portfolio');
+        
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remover clase activa
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const category = btn.getAttribute('data-category');
+                
+                // Primero ocultar todos
+                portfolioItems.forEach(item => {
+                    item.classList.add('hidden');
+                });
+                
+                // Luego mostrar los que coinciden con un pequeño delay
+                setTimeout(() => {
+                    portfolioItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.classList.remove('hidden');
+                        }
+                    });
+                    
+                    // Scroll suave para mantener la vista en la sección
+                    const rect = lashesSection.getBoundingClientRect();
+                    if (rect.top < 0) {
+                        lashesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 50);
+            });
+        });
+        
+        // JavaScript para el portfolio de microblading/nanoblading
+        const categoryBtnsMicro = document.querySelectorAll('.category-btn-micro');
+        const portfolioItemsMicro = document.querySelectorAll('.microblading-portfolio .portfolio-item');
+        const microSection = document.querySelector('.microblading-portfolio');
+        
+        categoryBtnsMicro.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remover clase activa
+                categoryBtnsMicro.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const category = btn.getAttribute('data-category-micro');
+                
+                // Primero ocultar todos
+                portfolioItemsMicro.forEach(item => {
+                    item.classList.add('hidden');
+                });
+                
+                // Luego mostrar los que coinciden con un pequeño delay
+                setTimeout(() => {
+                    portfolioItemsMicro.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category-micro') === category) {
+                            item.classList.remove('hidden');
+                        }
+                    });
+                    
+                    // Scroll suave para mantener la vista en la sección
+                    const rect = microSection.getBoundingClientRect();
+                    if (rect.top < 0) {
+                        microSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 50);
+            });
+        });
+        
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        
+        // Agregar click a todas las imágenes y videos del portfolio
+        document.querySelectorAll('.portfolio-image img, .before-after-image img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImage.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+        
+        // Los videos se reproducen inline, no necesitan lightbox
+        document.querySelectorAll('.portfolio-image video').forEach(video => {
+            video.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        });
+        
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+        
+        // Cerrar lightbox al hacer click fuera
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        
+        // Email Popup
+        function closeEmailPopup() {
+            const popup = document.getElementById('emailPopup');
+            popup.classList.remove('active');
+            localStorage.setItem('emailPopupShown', 'true');
+            localStorage.setItem('emailPopupDate', new Date().toISOString());
+        }
+        
+        // Mostrar popup después de 10 segundos si no se ha mostrado antes
+        window.addEventListener('load', () => {
+            const popupShown = localStorage.getItem('emailPopupShown');
+            const popupDate = localStorage.getItem('emailPopupDate');
+            
+            // Mostrar popup si nunca se mostró, o si pasaron más de 7 días
+            let shouldShow = !popupShown;
+            if (popupDate) {
+                const daysSince = (new Date() - new Date(popupDate)) / (1000 * 60 * 60 * 24);
+                if (daysSince > 7) {
+                    shouldShow = true;
+                }
+            }
+            
+            if (shouldShow) {
+                setTimeout(() => {
+                    document.getElementById('emailPopup').classList.add('active');
+                }, 10000); // 10 segundos
+            }
+        });
+        
+        // Cerrar popup con tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeEmailPopup();
+            }
+        });
+        
+        // Cerrar popup al hacer click fuera
+        document.getElementById('emailPopup').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('emailPopup')) {
+                closeEmailPopup();
+            }
+        });
+        
+        // Manejar envío del formulario del popup
+        document.getElementById('emailPopupForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('popupName').value;
+            const email = document.getElementById('popupEmail').value;
+            const currentLang = localStorage.getItem('language') || 'es';
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+
+            // Mostrar loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+
+            try {
+                // Enviar a Google Apps Script
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbwDSXLDaiMKtAcTYiv7bI-8zwpLmwK4RN2yXHINjvJPNIHtl3a4YjuY9ABgrDZxAtewRA/exec';
+                const response = await fetch(`${scriptURL}?action=descuento&nombre=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`);
+                const result = await response.json();
+
+                if (result.success) {
+                    const messages = {
+                        es: `¡Gracias ${name}! 🎉\n\nTe hemos enviado tu código de descuento del 10% a ${email}\n\nRevisa tu bandeja de entrada (y spam por si acaso).\n\n¡Te esperamos en BeautyBox!`,
+                        en: `Thank you ${name}! 🎉\n\nWe've sent your 10% discount code to ${email}\n\nCheck your inbox (and spam folder just in case).\n\nWe look forward to seeing you at BeautyBox!`
+                    };
+                    alert(messages[currentLang]);
+                } else {
+                    throw new Error(result.error);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                const errorMessages = {
+                    es: `¡Gracias ${name}! 🎉\n\nTu código de descuento es: BIENVENIDA10\n\nMenciónalo en tu primera visita.\n\n¡Te esperamos en BeautyBox!`,
+                    en: `Thank you ${name}! 🎉\n\nYour discount code is: BIENVENIDA10\n\nMention it on your first visit.\n\nWe look forward to seeing you at BeautyBox!`
+                };
+                alert(errorMessages[currentLang]);
+            }
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = '¡Quiero mi descuento!';
+            closeEmailPopup();
+            
+            // Opcional: redirigir a WhatsApp para reservar
+            setTimeout(() => {
+                const confirmMessages = {
+                    es: '¿Quieres reservar tu cita ahora por WhatsApp?',
+                    en: 'Would you like to book your appointment now via WhatsApp?'
+                };
+                const shouldRedirect = confirm(confirmMessages[currentLang]);
+                if (shouldRedirect) {
+                    const whatsappMessages = {
+                        es: 'Hola%20BeautyBox!%20Tengo%20mi%20código%20de%2010%25%20OFF%20y%20quiero%20reservar%20una%20cita.%20%C2%BFCuándo%20tienen%20disponibilidad%3F',
+                        en: 'Hello%20BeautyBox!%20I%20have%20my%2010%25%20OFF%20code%20and%20I%20want%20to%20book%20an%20appointment.%20When%20do%20you%20have%20availability%3F'
+                    };
+                    window.open(`https://wa.me/34642841932?text=${whatsappMessages[currentLang]}`, '_blank');
+                }
+            }, 500);
+        });
+        
+        // Language Switcher System
+        function switchLanguage(lang) {
+            // Save preference
+            localStorage.setItem('language', lang);
+            
+            // Update button states
+            document.getElementById('langEs').classList.toggle('active', lang === 'es');
+            document.getElementById('langEn').classList.toggle('active', lang === 'en');
+            
+            // Translate all elements with data-en attribute
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(element => {
+                const originalText = element.textContent.trim();
+                const englishText = element.getAttribute('data-en');
+                
+                if (lang === 'en') {
+                    // Store original Spanish text
+                    if (!element.hasAttribute('data-es')) {
+                        element.setAttribute('data-es', originalText);
+                    }
+                    element.textContent = englishText;
+                } else {
+                    // Restore Spanish text
+                    const spanishText = element.getAttribute('data-es');
+                    if (spanishText) {
+                        element.textContent = spanishText;
+                    }
+                }
+            });
+            
+            // Update WhatsApp links
+            updateWhatsAppLinks(lang);
+        }
+        
+        function updateWhatsAppLinks(lang) {
+            const messages = {
+                nav: {
+                    es: 'Hola%20BeautyBox!%20Quiero%20reservar%20una%20cita.%20%C2%BFTienen%20disponibilidad%3F',
+                    en: 'Hello%20BeautyBox!%20I%20want%20to%20book%20an%20appointment.%20Do%20you%20have%20availability%3F'
+                },
+                hero: {
+                    es: 'Hola%20BeautyBox!%20Me%20encanta%20su%20trabajo%20y%20quiero%20reservar%20una%20cita.%20%C2%BFCu%C3%A1ndo%20tienen%20disponibilidad%3F',
+                    en: 'Hello%20BeautyBox!%20I%20love%20your%20work%20and%20I%20want%20to%20book%20an%20appointment.%20When%20do%20you%20have%20availability%3F'
+                },
+                service: {
+                    es: 'Hola!%20Me%20interesa%20',
+                    en: 'Hello!%20I%27m%20interested%20in%20'
+                },
+                float: {
+                    es: 'Hola%20BeautyBox!%20Me%20gustar%C3%ADa%20reservar%20una%20cita.%20%C2%BFTienen%20disponibilidad%3F',
+                    en: 'Hello%20BeautyBox!%20I%20would%20like%20to%20book%20an%20appointment.%20Do%20you%20have%20availability%3F'
+                }
+            };
+            
+            // Nav button y Hero button ahora apuntan a reservar-cita.html (no necesitan actualización)
+            // const navBtn = document.getElementById('navBookBtn');
+            // if (navBtn) {
+            //     navBtn.href = `https://wa.me/34642841932?text=${messages.nav[lang]}`;
+            // }
+            
+            // const heroBtn = document.getElementById('heroBookBtn');
+            // if (heroBtn) {
+            //     heroBtn.href = `https://wa.me/34642841932?text=${messages.hero[lang]}`;
+            // }
+            
+            // Service buttons
+            const serviceButtons = document.querySelectorAll('.service-book-btn');
+            serviceButtons.forEach(btn => {
+                const serviceNameES = btn.getAttribute('data-service');
+                const serviceNameEN = btn.getAttribute('data-service-en');
+                const serviceName = lang === 'en' ? serviceNameEN : serviceNameES;
+                const serviceEncoded = encodeURIComponent('*' + serviceName + '*');
+                const question = lang === 'en' ? '%20When%20do%20you%20have%20availability%3F' : '.%20%C2%BFCu%C3%A1ndo%20tienen%20disponibilidad%3F';
+                btn.href = `https://wa.me/34642841932?text=${messages.service[lang]}${serviceEncoded}${question}`;
+            });
+            
+            // WhatsApp float button
+            const floatBtn = document.querySelector('.whatsapp-button');
+            if (floatBtn) {
+                floatBtn.href = `https://wa.me/34642841932?text=${messages.float[lang]}`;
+            }
+            
+            // Update tooltip
+            const tooltip = document.querySelector('.whatsapp-tooltip');
+            if (tooltip) {
+                tooltip.textContent = lang === 'en' ? 'Chat with us!' : '¡Chatea con nosotros!';
+            }
+        }
+        
+        // Detect browser language on first visit
+        window.addEventListener('load', () => {
+            const savedLang = localStorage.getItem('language');
+            if (!savedLang) {
+                const browserLang = navigator.language || navigator.userLanguage;
+                const defaultLang = browserLang.startsWith('es') ? 'es' : 'en';
+                localStorage.setItem('language', defaultLang);
+                if (defaultLang === 'en') {
+                    switchLanguage('en');
+                }
+            } else if (savedLang === 'en') {
+                switchLanguage('en');
+            }
+            
+            // Show cookie banner if not accepted
+            checkCookieConsent();
+        });
+        
+        // Cookie Banner System (RGPD/GDPR)
+        function checkCookieConsent() {
+            const cookieConsent = localStorage.getItem('cookieConsent');
+            if (!cookieConsent) {
+                setTimeout(() => {
+                    document.getElementById('cookieBanner').classList.add('active');
+                }, 1000); // Espera 1 segundo antes de mostrar
+            } else if (cookieConsent === 'accepted') {
+                // Load analytics and tracking if accepted
+                loadAnalytics();
+            }
+        }
+        
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieBanner').classList.remove('active');
+            loadAnalytics();
+            
+            const currentLang = localStorage.getItem('language') || 'es';
+            const messages = {
+                es: '✅ Preferencias guardadas. ¡Gracias!',
+                en: '✅ Preferences saved. Thank you!'
+            };
+            // Opcional: mostrar notificación
+            console.log(messages[currentLang]);
+        }
+        
+        function rejectCookies() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            document.getElementById('cookieBanner').classList.remove('active');
+            
+            const currentLang = localStorage.getItem('language') || 'es';
+            const messages = {
+                es: '✅ Solo usaremos cookies esenciales.',
+                en: '✅ We will only use essential cookies.'
+            };
+            console.log(messages[currentLang]);
+        }
+        
+        function loadAnalytics() {
+            // Google Analytics 4 - ACTIVO
+            if (!window.gtag) {
+                // Cargar script de gtag.js
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-K68VV4HXX5';
+                document.head.appendChild(script);
+                
+                // Configurar gtag
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', 'G-K68VV4HXX5', {
+                    'send_page_view': true,
+                    'cookie_flags': 'SameSite=None;Secure'
+                });
+                
+                // Eventos personalizados
+                trackCustomEvents();
+                
+                console.log('✅ Google Analytics activado: G-K68VV4HXX5');
+            }
+            
+            // Meta Pixel (cuando tengas el ID, descomenta)
+            /*
+            if (!window.fbq) {
+                !function(f,b,e,v,n,t,s)
+                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', 'TU-PIXEL-ID-AQUI');
+                fbq('track', 'PageView');
+            }
+            */
+        }
+        
+        function trackCustomEvents() {
+            // Trackear clicks en WhatsApp
+            document.querySelectorAll('a[href*="wa.me"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    gtag('event', 'click_whatsapp', {
+                        'event_category': 'engagement',
+                        'event_label': link.getAttribute('href')
+                    });
+                });
+            });
+            
+            // Trackear clicks en teléfono
+            document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    gtag('event', 'click_phone', {
+                        'event_category': 'engagement',
+                        'event_label': link.textContent
+                    });
+                });
+            });
+            
+            // Trackear clicks en email
+            document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+                link.addEventListener('click', () => {
+                    gtag('event', 'click_email', {
+                        'event_category': 'engagement',
+                        'event_label': link.getAttribute('href')
+                    });
+                });
+            });
+            
+            // Trackear cambio de idioma
+            window.switchLanguage = (function(originalFn) {
+                return function(lang) {
+                    gtag('event', 'language_change', {
+                        'event_category': 'engagement',
+                        'event_label': lang
+                    });
+                    return originalFn.apply(this, arguments);
+                };
+            })(window.switchLanguage);
+            
+            // Trackear envío de formulario popup
+            const popupForm = document.getElementById('emailPopupForm');
+            if (popupForm) {
+                popupForm.addEventListener('submit', () => {
+                    gtag('event', 'lead_capture', {
+                        'event_category': 'conversion',
+                        'event_label': 'popup_10_percent'
+                    });
+                });
+            }
+        }
+    </script>
+</body>
+</html>

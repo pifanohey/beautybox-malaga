@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lifting de Pestañas en Málaga - Pestañas elevadas y curvadas naturalmente durante 6-8 semanas. Sin extensiones, sin mantenimiento. BeautyBox Málaga.">
+    <title>Lifting de Pestañas Málaga - Efecto Natural 6-8 Semanas | BeautyBox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #d4a5a5;
+            --secondary-color: #1a1a1a;
+            --accent-color: #c48b9f;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --white: #fff;
+            --light-bg: #f9f7f5;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        header {
+            background: var(--white);
+            color: var(--text-dark);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(212, 165, 165, 0.4) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><rect fill="%23f9f7f5" width="1200" height="400"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(196, 139, 159, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .process-steps {
+            display: grid;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .step {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background: var(--primary-color);
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .price-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .price-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
+        }
+
+        .price-includes {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+        }
+
+        .price-includes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .price-includes li {
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .price-includes li i {
+            color: var(--white);
+            margin-right: 0.5rem;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table th {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 1.2rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 1.2rem;
+            border: 1px solid #e0e0e0;
+            background: var(--white);
+        }
+
+        .comparison-table tr:nth-child(even) td {
+            background: var(--accent-color);
+        }
+
+        .faq-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, rgba(26, 26, 26, 0.95) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 15px;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .step {
+                flex-direction: column;
+            }
+
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                BeautyBox
+                <span>Lashes & Brows</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="nanoblading.html">Nanoblading</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Lifting de Pestañas en Málaga</h1>
+        <p>Pestañas elevadas, curvadas y naturales durante 6-8 semanas<br>Sin extensiones • Sin mantenimiento diario • Efecto WOW natural</p>
+        <div class="hero-buttons">
+            <a href="tel:+34XXXXXXXXX" class="btn-primary">
+                <i class="fas fa-phone"></i> Reservar Ahora
+            </a>
+            <a href="#proceso" class="btn-secondary">
+                <i class="fas fa-info-circle"></i> Más Información
+            </a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>¿Pestañas Cortas o Rectas? El Lifting es Tu Solución</h2>
+            <p>Eleva y curva tus pestañas naturales desde la raíz para una mirada abierta e impactante</p>
+        </div>
+
+        <p style="font-size: 1.2rem; text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-light); line-height: 1.8;">
+            Si sientes que tus pestañas son demasiado cortas, rectas o caídas, y el rímel no es suficiente, 
+            el <strong>lifting de pestañas</strong> puede ser tu mejor aliado. Este tratamiento revolucionario 
+            eleva y curva tus pestañas naturales desde la raíz, creando un efecto de mayor longitud y apertura 
+            en la mirada, ¡sin necesidad de extensiones ni maquillaje diario!
+        </p>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-arrow-up"></i>
+                <h3>Eleva desde la Raíz</h3>
+                <p>Curva tus pestañas desde el nacimiento, creando un efecto de mayor longitud visual y apertura en la mirada.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-eye"></i>
+                <h3>Abre Tu Mirada</h3>
+                <p>Las pestañas elevadas crean la ilusión de ojos más grandes y despiertos sin necesidad de maquillaje.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-leaf"></i>
+                <h3>100% Natural</h3>
+                <p>Sin extensiones artificiales, trabajamos con tus pestañas naturales para un resultado auténtico y duradero.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-clock"></i>
+                <h3>Larga Duración</h3>
+                <p>Resultados que duran 6-8 semanas, siguiendo el ciclo natural de crecimiento de tus pestañas.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-water"></i>
+                <h3>Sin Mantenimiento</h3>
+                <p>Despierta con pestañas perfectas todos los días. No necesitas rímel, rizador ni cuidados especiales.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-heart"></i>
+                <h3>Para Pestañas Sensibles</h3>
+                <p>Ideal para quienes no pueden usar extensiones o tienen pestañas delicadas. No daña ni debilita.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="proceso">
+        <div class="section-title">
+            <h2>El Proceso de Lifting de Pestañas</h2>
+            <p>Paso a paso hacia tu mirada perfecta en solo 45-60 minutos</p>
+        </div>
+
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Consulta y Diseño Personalizado (10 min)</h3>
+                    <p>Analizamos tus pestañas naturales, su longitud, grosor y dirección de crecimiento. Elegimos juntas el nivel de curvatura ideal para tu ojo: natural, medio o dramático. Cada mirada es única y merece un diseño personalizado.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Limpieza Profunda (5 min)</h3>
+                    <p>Limpiamos meticulosamente tus pestañas eliminando restos de maquillaje, aceites naturales o impurezas que puedan interferir con el tratamiento. Este paso es crucial para asegurar resultados óptimos.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Colocación del Molde Curvador (5 min)</h3>
+                    <p>Aplicamos un molde de silicona suave sobre el párpado que determinará la curvatura final de tus pestañas. Existen diferentes tamaños según la longitud de tus pestañas naturales, y elegimos el perfecto para ti.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Aplicación de Productos Levantadores (30 min)</h3>
+                    <p>Aplicamos cuidadosamente dos productos profesionales en secuencia:</p>
+                    <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                        <li><strong>Loción levantadora (15 min):</strong> Rompe suavemente los enlaces de queratina para moldear la pestaña</li>
+                        <li><strong>Fijador (10 min):</strong> Reestructura la queratina en su nueva forma curvada</li>
+                        <li><strong>Serum nutritivo (5 min):</strong> Hidrata y fortalece las pestañas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                    <h3>Tinte de Pestañas (Opcional - 10 min)</h3>
+                    <p>Recomendamos añadir tinte para intensificar el efecto. El tinte oscurece desde la raíz hasta las puntas, haciendo que tus pestañas luzcan más largas y definidas sin necesidad de máscara. ¡El resultado es espectacular!</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                    <h3>Resultado Final - ¡Mirada Impactante!</h3>
+                    <p>Retiramos el molde y ¡voilà! Tus pestañas están perfectamente elevadas y curvadas. Puedes ver el resultado inmediatamente: una mirada más abierta, luminosa y expresiva que durará semanas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="price-box">
+            <h3>Inversión en BeautyBox Málaga</h3>
+            <div class="price">45€</div>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Lifting de Pestañas</p>
+            
+            <div class="price-includes">
+                <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">Incluye:</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Consulta y diseño personalizado</li>
+                    <li><i class="fas fa-check"></i> Tratamiento lifting completo</li>
+                    <li><i class="fas fa-check"></i> Serum nutritivo fortalecedor</li>
+                    <li><i class="fas fa-check"></i> Guía de cuidados post-tratamiento</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Promoción Combo:</p>
+                <p style="font-size: 2rem; font-weight: bold;">Lifting + Tinte: 60€</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.9;">(Ahorra 5€ al combinar ambos servicios)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="background: var(--light-bg); padding: 4rem 2rem; border-radius: 15px;">
+        <div class="section-title">
+            <h2>¿El Lifting de Pestañas es Para Ti?</h2>
+            <p>Este tratamiento es perfecto si te identificas con alguna de estas situaciones</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Pestañas Cortas</h3>
+                <p>Si sientes que tus pestañas son muy cortas y quieres el efecto de más longitud sin extensiones.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Pestañas Rectas o Caídas</h3>
+                <p>Si tus pestañas crecen hacia abajo y necesitan definición y curvatura permanente.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Look Natural</h3>
+                <p>Si prefieres un resultado natural sin el volumen dramático de las extensiones.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Poco Tiempo</h3>
+                <p>Si quieres reducir tu rutina de maquillaje y despertarte con pestañas perfectas.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Estilo de Vida Activo</h3>
+                <p>Si practicas deportes, nadas frecuentemente o no quieres preocuparte por el mantenimiento.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Piel o Pestañas Sensibles</h3>
+                <p>Si no toleras extensiones, el pegamento te irrita o simplemente prefieres trabajar con tus pestañas naturales.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Lifting vs Extensiones: ¿Cuál Elegir?</h2>
+            <p>Comparación honesta para ayudarte a decidir</p>
+        </div>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>Lifting de Pestañas</th>
+                    <th>Extensiones de Pestañas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Resultado</strong></td>
+                    <td>Natural - Trabaja con tus pestañas</td>
+                    <td>Voluminoso - Añade pestañas artificiales</td>
+                </tr>
+                <tr>
+                    <td><strong>Duración</strong></td>
+                    <td>6-8 semanas</td>
+                    <td>3-4 semanas (requiere rellenos)</td>
+                </tr>
+                <tr>
+                    <td><strong>Mantenimiento</strong></td>
+                    <td>Cero - Despierta y listo</td>
+                    <td>Alto - Cuidados diarios</td>
+                </tr>
+                <tr>
+                    <td><strong>Tiempo de aplicación</strong></td>
+                    <td>45-60 minutos</td>
+                    <td>90-120 minutos</td>
+                </tr>
+                <tr>
+                    <td><strong>Precio inicial</strong></td>
+                    <td>45-60€</td>
+                    <td>80-120€</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Todo lo que necesitas saber sobre el lifting de pestañas</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Duele el tratamiento?</div>
+                <div class="faq-answer">
+                    No, el lifting de pestañas es completamente indoloro. Mantienes los ojos cerrados durante todo el procedimiento y la mayoría de las clientas lo encuentran tan relajante que se quedan dormidas.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cuánto dura el resultado?</div>
+                <div class="faq-answer">
+                    El lifting dura entre 6-8 semanas, siguiendo el ciclo natural de renovación de tus pestañas.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo usar rímel después?</div>
+                <div class="faq-answer">
+                    ¡Sí! De hecho, el lifting hace que el rímel se vea aún mejor. Espera 24 horas después del tratamiento y luego puedes usar tu rímel habitual sin restricciones.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Lista para Transformar Tu Mirada?</h2>
+            <p>Reserva tu lifting de pestañas y despierta con pestañas perfectas durante 2 meses</p>
+            <div class="hero-buttons" style="margin-top: 2rem;">
+                <a href="tel:+34XXXXXXXXX" class="btn-primary">
+                    <i class="fas fa-phone"></i> Llamar Ahora
+                </a>
+                <a href="https://wa.me/34XXXXXXXXX" class="btn-primary">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>BeautyBox Málaga</strong> - Especialistas en Lifting y Extensiones de Pestañas</p>
+        <p style="margin-top: 1rem;">
+            <a href="index.html">Inicio</a> | 
+            <a href="nanoblading.html">Nanoblading</a> | 
+            <a href="index.html#contacto">Contacto</a>
+        </p>
+        <p style="margin-top: 1rem;">&copy; 2025 BeautyBox Málaga. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

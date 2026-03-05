@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Extensiones de Pestañas Híbridas en Málaga - El equilibrio perfecto entre naturalidad y volumen. BeautyBox Málaga especialistas certificadas.">
+    <title>Extensiones Híbridas Málaga - Naturalidad con Volumen | BeautyBox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #d4a5a5;
+            --secondary-color: #1a1a1a;
+            --accent-color: #c48b9f;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --white: #fff;
+            --light-bg: #f9f7f5;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        header {
+            background: var(--white);
+            color: var(--text-dark);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(212, 165, 165, 0.4) 100%),
+                        url('https://images.unsplash.com/photo-1583001931096-959e8b6a5765?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(196, 139, 159, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .comparison-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            border-radius: 15px;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .comparison-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .comparison-card h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        .comparison-card ul {
+            list-style: none;
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        .comparison-card li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+        }
+
+        .comparison-card .highlight {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: var(--white);
+            padding: 0.5rem;
+            margin: -2rem -2rem 1.5rem;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .price-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .price-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
+        }
+
+        .price-note {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 1rem;
+        }
+
+        .price-includes {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+        }
+
+        .price-includes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .price-includes li {
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .price-includes li i {
+            color: var(--white);
+            margin-right: 0.5rem;
+        }
+
+        .process-timeline {
+            margin: 3rem 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        .timeline-number {
+            background: var(--primary-color);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+        }
+
+        .faq-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, rgba(26, 26, 26, 0.95) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 15px;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                BeautyBox
+                <span>Lashes & Brows</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="nanoblading.html">Nanoblading</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Extensiones de Pestañas Híbridas</h1>
+        <p>El equilibrio perfecto entre naturalidad y volumen<br>Para una mirada sofisticada con toque natural</p>
+        <div class="hero-buttons">
+            <a href="tel:+34XXXXXXXXX" class="btn-primary">
+                <i class="fas fa-phone"></i> Reservar Ahora
+            </a>
+            <a href="#info" class="btn-secondary">
+                <i class="fas fa-info-circle"></i> Más Información
+            </a>
+        </div>
+    </section>
+
+    <div class="container" id="info">
+        <div class="section-title">
+            <h2>¿Qué Son las Extensiones Híbridas?</h2>
+            <p>La combinación perfecta de dos técnicas para un resultado espectacular</p>
+        </div>
+
+        <p style="font-size: 1.2rem; text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-light); line-height: 1.8;">
+            Si buscas un look con <strong>más densidad que las pestañas clásicas</strong> pero sin llegar al volumen completo dramático, 
+            las extensiones híbridas son tu opción ideal. Son una combinación inteligente de <strong>extensiones clásicas</strong> 
+            (una por una) y <strong>volumen ruso</strong> (abanicos de pestañas más finas), creando el equilibrio perfecto entre 
+            naturalidad y volumen.
+        </p>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Equilibrio Perfecto</h3>
+                <p>Más volumen que las clásicas, más natural que el volumen ruso. Lo mejor de ambos mundos en una sola técnica.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-feather"></i>
+                <h3>Ligeras y Cómodas</h3>
+                <p>A pesar del volumen añadido, son sorprendentemente ligeras y cómodas de llevar todo el día.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-fill-drip"></i>
+                <h3>Rellena Zonas Despobladas</h3>
+                <p>Perfectas para disimular huecos o zonas con menos densidad, creando una línea uniforme y completa.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-sparkles"></i>
+                <h3>Efecto Voluminoso Natural</h3>
+                <p>Aportan densidad y profundidad sin perder la apariencia natural. Nadie notará que son extensiones.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-ban"></i>
+                <h3>Sin Necesidad de Rímel</h3>
+                <p>Despierta con pestañas perfectas. No necesitas maquillaje para tener una mirada impactante.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-clock"></i>
+                <h3>Larga Duración</h3>
+                <p>Con los cuidados adecuados, duran 4-6 semanas. Los rellenos cada 2-3 semanas mantienen el look perfecto.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="comparison-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Compara: ¿Cuál Técnica es Para Ti?</h2>
+                <p>Entendiendo las diferencias entre cada estilo</p>
+            </div>
+
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h3>Extensiones Clásicas</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">1 extensión por pestaña natural</p>
+                    <ul>
+                        <li>✓ Look más natural y discreto</li>
+                        <li>✓ Ideal para el día a día</li>
+                        <li>✓ Perfectas para principiantes</li>
+                        <li>✓ Menos densidad</li>
+                        <li>✓ Proceso más rápido (1.5-2h)</li>
+                        <li><strong>Precio:</strong> Desde 60€</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="highlight">
+                        <h3 style="margin: 0; color: var(--white);">Extensiones Híbridas</h3>
+                        <p style="font-size: 0.85rem; margin: 0.5rem 0 0;">⭐ RECOMENDADO ⭐</p>
+                    </div>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">Mezcla de clásicas + volumen</p>
+                    <ul>
+                        <li>✓ Equilibrio perfecto</li>
+                        <li>✓ Versatilidad día y noche</li>
+                        <li>✓ Rellena zonas despobladas</li>
+                        <li>✓ Densidad media-alta</li>
+                        <li>✓ Proceso medio (2-2.5h)</li>
+                        <li><strong>Precio:</strong> Desde 80€</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-card">
+                    <h3>Volumen Ruso</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1rem;">2-6 extensiones por pestaña</p>
+                    <ul>
+                        <li>✓ Máximo volumen y densidad</li>
+                        <li>✓ Look más dramático</li>
+                        <li>✓ Ideal para eventos especiales</li>
+                        <li>✓ Máxima densidad</li>
+                        <li>✓ Proceso más largo (2.5-3h)</li>
+                        <li><strong>Precio:</strong> Desde 100€</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>¿Las Extensiones Híbridas Son Para Ti?</h2>
+            <p>Descubre si este tratamiento se adapta a tus necesidades</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Quieres Más que lo Clásico</h3>
+                <p>Si las extensiones clásicas se te quedan cortas pero el volumen ruso te parece demasiado, ¡este es tu punto medio!</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Tienes Pestañas Irregulares</h3>
+                <p>Perfectas si tus pestañas tienen huecos o zonas con menos densidad que quieres disimular.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Buscas Versatilidad</h3>
+                <p>Ideales si quieres un look que funcione tanto para el día (oficina) como para la noche (eventos).</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Quieres Look Sofisticado</h3>
+                <p>Si te gusta un acabado elegante y con presencia, pero sin perder la naturalidad.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Primera Vez con Extensiones</h3>
+                <p>Excelente opción para empezar si nunca has llevado extensiones y quieres probar algo con impacto.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Activa pero Femenina</h3>
+                <p>Si llevas un estilo de vida activo pero no quieres renunciar a una mirada femenina y arreglada.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="price-box">
+            <h3>Inversión en BeautyBox Málaga</h3>
+            <div class="price">80€</div>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Extensiones Híbridas - Aplicación Completa</p>
+            
+            <div class="price-includes">
+                <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">Incluye:</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Consulta y diseño personalizado</li>
+                    <li><i class="fas fa-check"></i> Aplicación completa (2-2.5 horas)</li>
+                    <li><i class="fas fa-check"></i> Pestañas premium de alta calidad</li>
+                    <li><i class="fas fa-check"></i> Guía de cuidados post-aplicación</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Rellenos:</p>
+                <p style="font-size: 1.5rem; font-weight: bold;">50€</p>
+                <p class="price-note">Cada 2-3 semanas para mantener el look perfecto</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>El Proceso de Aplicación</h2>
+            <p>Qué esperar durante tu cita</p>
+        </div>
+
+        <div class="process-timeline">
+            <div class="timeline-item">
+                <div class="timeline-number">1</div>
+                <div class="timeline-content">
+                    <h3>Consulta Personalizada (15 min)</h3>
+                    <p>Analizamos tus pestañas naturales, discutimos tus expectativas y diseñamos el look perfecto según la forma de tu ojo y tu estilo personal.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-number">2</div>
+                <div class="timeline-content">
+                    <h3>Preparación (10 min)</h3>
+                    <p>Limpiamos tus pestañas profundamente, colocamos los parches protectores bajo el ojo y te acomodamos para que estés completamente relajada.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-number">3</div>
+                <div class="timeline-content">
+                    <h3>Aplicación Híbrida (90-120 min)</h3>
+                    <p>Combinamos técnica clásica y volumen estratégicamente: clásicas en las zonas con más densidad natural y abanicos de volumen en zonas más despobladas o para añadir profundidad.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-number">4</div>
+                <div class="timeline-content">
+                    <h3>Revisión Final (5 min)</h3>
+                    <p>Verificamos que cada extensión esté perfectamente adherida, el diseño sea simétrico y el resultado cumpla tus expectativas.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-number">5</div>
+                <div class="timeline-content">
+                    <h3>Instrucciones de Cuidado</h3>
+                    <p>Te explicamos cómo cuidar tus extensiones para maximizar su duración: evitar agua primeras 24h, no usar productos oleosos, cepillarlas suavemente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Resolvemos todas tus dudas</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cuánto duran las extensiones híbridas?</div>
+                <div class="faq-answer">
+                    Duran entre 4-6 semanas dependiendo del ciclo de crecimiento de tus pestañas naturales. Recomendamos rellenos cada 2-3 semanas para mantener un look completo y uniforme.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Dañan las pestañas naturales?</div>
+                <div class="faq-answer">
+                    No, cuando son aplicadas correctamente por profesionales certificadas como nosotras. Usamos técnicas y productos de alta calidad que respetan tus pestañas naturales. Es fundamental seguir los cuidados indicados.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo usar máscara de pestañas?</div>
+                <div class="faq-answer">
+                    No es necesario y no lo recomendamos. Las extensiones híbridas ya proporcionan el volumen y longitud deseados. Si insistes, usa solo máscara water-based específica para extensiones y nunca waterproof.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cuánto tiempo tarda la aplicación?</div>
+                <div class="faq-answer">
+                    La primera aplicación completa toma entre 2 y 2.5 horas. Los rellenos son más rápidos, aproximadamente 60-90 minutos dependiendo de cuántas extensiones necesiten reemplazarse.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo nadar y hacer deporte con extensiones híbridas?</div>
+                <div class="faq-answer">
+                    Sí, después de las primeras 24 horas puedes hacer vida completamente normal. Las extensiones resisten agua, sudor, piscina y playa. Eso sí, sécalas con secador en aire frío después de mojarlas y cepíllalas suavemente.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Qué diferencia hay con las extensiones clásicas?</div>
+                <div class="faq-answer">
+                    Las clásicas usan 1 extensión por pestaña natural, mientras las híbridas combinan extensiones individuales con pequeños abanicos de volumen. El resultado es más densidad y volumen que las clásicas, pero más natural que el volumen ruso completo.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Lista para una Mirada Espectacular?</h2>
+            <p>Reserva tu cita para extensiones híbridas y descubre el equilibrio perfecto</p>
+            <div class="hero-buttons" style="margin-top: 2rem;">
+                <a href="tel:+34XXXXXXXXX" class="btn-primary">
+                    <i class="fas fa-phone"></i> Llamar Ahora
+                </a>
+                <a href="https://wa.me/34XXXXXXXXX" class="btn-primary">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                📍 Av. del Arroyo de los Ángeles, 5, Distrito Centro, 29009 Málaga<br>
+                🕐 Lunes a Viernes: 10:00 - 20:00 | Sábados: 10:00 - 14:00
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>BeautyBox Málaga</strong> - Especialistas en Extensiones de Pestañas</p>
+        <p style="margin-top: 1rem;">
+            <a href="index.html">Inicio</a> | 
+            <a href="lifting-pestanas.html">Lifting</a> | 
+            <a href="nanoblading.html">Nanoblading</a> | 
+            <a href="index.html#contacto">Contacto</a>
+        </p>
+        <p style="margin-top: 1rem;">&copy; 2025 BeautyBox Málaga. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

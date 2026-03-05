@@ -1,0 +1,70 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Backup files
+*.bak
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+
+# Images not optimized (large originals)
+Imagenes/Imagenes usadas en la pagina sin optimizar/
+
+# Google Apps Script (contains Sheet ID - backup only)
+google-apps-script-code.js
+
+# Backup codes (internal reference)
+BACK UP CODES/
+
+# Internal docs
+Pasos a mejorar/
+Precios/
+RESUMEN_ANNYA.md
+ACTUALIZAR_NETLIFY.md
+CHECKLIST_POST_LANZAMIENTO.md
+CONFIGURAR_ANALYTICS.md
+GOOGLE_ANALYTICS_INSTALADO.md
+INSTRUCCIONES_GOOGLE_REVIEWS.txt
+LEGAL_SETUP_COMPLETO.md
+
+# Portada source files (duplicates of Imagenes/servicios/)
+Portada */
+
+# Unused media folders (not referenced in any HTML)
+Imagenes/Henna y Visagismo/
+Imagenes/Manicura Rusa/
+Imagenes/Lifting de Pestañas/
+
+# Unused media files (not referenced in any HTML page)
+Imagenes/Extensiones de Pestañas/20250307_131828.jpg
+Imagenes/Extensiones de Pestañas/IMG_6195.jpg
+Imagenes/Extensiones de Pestañas/IMG_6667.jpg
+Imagenes/Extensiones de Pestañas/IMG_7207.jpg
+Imagenes/Extensiones de Pestañas/IMG_7783.jpg
+Imagenes/Extensiones de Pestañas/Post de instagram productos y servicios en oferta 2 fotos elegante blanco y*
+Imagenes/Extensiones de Pestañas/White and Black Father's Day Photo Collage*
+Imagenes/Extensiones de Pestañas/Historia de Instagram Bienvenido Verano Mar Aesthetic Azul*
+Imagenes/Extensiones de Pestañas/Post de Instagram Estetica Botox Foto minimalista*
+Imagenes/Extensiones de Pestañas/Reel instagram meditación moderno verde y beige*
+Imagenes/Extensiones de Pestañas/Si buscas un look natural y de bajo mantenimiento*
+Imagenes/Laminado de Cejas/Laminado de cejas_20251014_225359_0000.png
+Imagenes/Laminado de Cejas/reels instagram camara antigua naranja*
+Imagenes/Microblading/Blanco Gris y Marrón*
+Imagenes/Microblading/IMG_2232.jpeg
+Imagenes/Microblading/IMG_2241.jpeg
+Imagenes/Microblading/IMG_2242.mov.mp4
+Imagenes/Microblading/IMG_7641.mov.mp4
+Imagenes/Microblading/Neutral Minimal Flower Bouquet*
+Imagenes/Microblading/Untitled design*
+Imagenes/Microblading/Vídeo para Móviles*
+Imagenes/Microblading/hello sweater season*
+Imagenes/Microblading/video movil minimalista aesthetic play blanco*
+Imagenes/servicios/extensiones-pestanas-portada.jpg

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Depilación con Hilo en Málaga - Precisión, naturalidad y cuidado para tu piel. Técnica 100% natural ideal para diseñar cejas perfectas. BeautyBox Málaga.">
+    <title>Depilación con Hilo Málaga - Precisión Natural | BeautyBox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #d4a5a5;
+            --secondary-color: #1a1a1a;
+            --accent-color: #c48b9f;
+            --text-dark: #2c2c2c;
+            --text-light: #666;
+            --white: #fff;
+            --light-bg: #f9f7f5;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        header {
+            background: var(--white);
+            color: var(--text-dark);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.85) 0%, rgba(212, 165, 165, 0.4) 100%),
+                        url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(196, 139, 159, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border: 2px solid var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .benefit-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .comparison-table th {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 1.2rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 1.2rem;
+            border: 1px solid #e0e0e0;
+            background: var(--white);
+        }
+
+        .comparison-table tr:nth-child(even) td {
+            background: var(--light-bg);
+        }
+
+        .comparison-table .highlight {
+            background: var(--primary-color);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        .price-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .price-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
+        }
+
+        .price-includes {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1.5rem;
+        }
+
+        .price-includes ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .price-includes li {
+            padding: 0.5rem 0;
+            font-size: 1.1rem;
+        }
+
+        .price-includes li i {
+            color: var(--white);
+            margin-right: 0.5rem;
+        }
+
+        .faq-section {
+            background: var(--light-bg);
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .faq-item {
+            background: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, rgba(26, 26, 26, 0.95) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 15px;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .feature-highlight {
+            background: var(--light-bg);
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+        }
+
+        .feature-highlight h3 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .feature-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .feature-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            font-size: 1.3rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-text p {
+            color: var(--text-light);
+        }
+
+        footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .price {
+                font-size: 2.5rem;
+            }
+
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                BeautyBox
+                <span>Lashes & Brows</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="nanoblading.html">Nanoblading</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Depilación con Hilo en Málaga</h1>
+        <p>Precisión, naturalidad y cuidado para tu piel<br>La técnica milenaria que diseña cejas perfectas</p>
+        <div class="hero-buttons">
+            <a href="tel:+34XXXXXXXXX" class="btn-primary">
+                <i class="fas fa-phone"></i> Reservar Ahora
+            </a>
+            <a href="#info" class="btn-secondary">
+                <i class="fas fa-info-circle"></i> Más Información
+            </a>
+        </div>
+    </section>
+
+    <div class="container" id="info">
+        <div class="section-title">
+            <h2>¿Por Qué Elegir la Depilación con Hilo?</h2>
+            <p>Una técnica milenaria con beneficios modernos</p>
+        </div>
+
+        <p style="font-size: 1.2rem; text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-light); line-height: 1.8;">
+            La depilación con hilo es una <strong>técnica ancestral de origen oriental</strong> que ha conquistado el mundo de la estética 
+            por su precisión incomparable y sus beneficios para la piel. En BeautyBox dominamos esta técnica a la perfección para 
+            diseñar tus <strong>cejas ideales con máxima precisión</strong> y cuidado.
+        </p>
+
+        <div class="feature-highlight">
+            <h3>Los 4 Beneficios Clave del Hilo</h3>
+            <div class="feature-list">
+                <div class="feature-list-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Precisión Máxima</h4>
+                        <p>Ideal para diseñar y definir tus cejas con exactitud milimétrica. El hilo permite capturar incluso los vellos más finos y definir líneas perfectas imposibles de lograr con cera o pinzas.</p>
+                    </div>
+                </div>
+
+                <div class="feature-list-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>100% Natural - Sin Químicos</h4>
+                        <p>Solo utilizamos un hilo de algodón 100% natural. No hay ceras, productos químicos ni ingredientes que puedan irritar tu piel. Perfecto para pieles sensibles, alérgicas o con tendencia al acné.</p>
+                    </div>
+                </div>
+
+                <div class="feature-list-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Elimina Vellos Más Finos</h4>
+                        <p>El hilo atrapa y elimina desde la raíz incluso el vello más fino y corto (vello peach fuzz). El resultado: piel suave, limpia y radiante. Tu maquillaje se aplicará mucho mejor.</p>
+                    </div>
+                </div>
+
+                <div class="feature-list-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Retarda el Crecimiento</h4>
+                        <p>Al eliminar el vello desde la raíz, el crecimiento es más lento que con otros métodos. Además, con el tiempo, el vello crece más fino y débil. Espacias más las sesiones y ahorras tiempo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Beneficios Adicionales del Hilo</h2>
+            <p>Más ventajas que te encantarán</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-hand-sparkles"></i>
+                <h3>Piel Suave y Radiante</h3>
+                <p>Al eliminar el vello superficial (peach fuzz), tu piel queda increíblemente suave y el maquillaje se aplica de forma mucho más uniforme.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-allergies"></i>
+                <h3>Ideal para Pieles Sensibles</h3>
+                <p>Sin químicos, sin calor, sin irritación. Perfecto si tienes piel sensible, rosacea, acné o alergias a productos cosméticos.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-spa"></i>
+                <h3>Efecto Exfoliante</h3>
+                <p>El hilo realiza una suave exfoliación de la piel al pasar, eliminando células muertas y dejando tu rostro luminoso.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-ban"></i>
+                <h3>No Estira la Piel</h3>
+                <p>A diferencia de la cera, no afecta la elasticidad de tu piel. Ideal si te preocupa el envejecimiento prematuro del contorno de ojos.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-tint"></i>
+                <h3>Sin Manchas ni Marcas</h3>
+                <p>No deja residuos, no mancha la piel y no genera hiperpigmentación. Tu piel queda limpia al instante.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Rápido y Eficiente</h3>
+                <p>El proceso es muy rápido (10-15 minutos para cejas completas) y puedes volver a tu rutina inmediatamente.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>Hilo vs Otros Métodos de Depilación</h2>
+            <p>Comparación honesta para que decidas informada</p>
+        </div>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>Depilación con Hilo</th>
+                    <th>Cera</th>
+                    <th>Pinzas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Precisión</strong></td>
+                    <td class="highlight">Máxima</td>
+                    <td>Media</td>
+                    <td>Alta (pero lenta)</td>
+                </tr>
+                <tr>
+                    <td><strong>Velocidad</strong></td>
+                    <td class="highlight">10-15 min</td>
+                    <td>10-15 min</td>
+                    <td>20-30 min</td>
+                </tr>
+                <tr>
+                    <td><strong>Químicos</strong></td>
+                    <td class="highlight">Ninguno (100% natural)</td>
+                    <td>Sí (resinas, colorantes)</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td><strong>Dolor</strong></td>
+                    <td>Leve-Moderado</td>
+                    <td>Moderado-Alto</td>
+                    <td>Leve (pero tedioso)</td>
+                </tr>
+                <tr>
+                    <td><strong>Apto piel sensible</strong></td>
+                    <td class="highlight">✅ Excelente</td>
+                    <td>⚠️ Puede irritar</td>
+                    <td>✅ Sí</td>
+                </tr>
+                <tr>
+                    <td><strong>Elimina vello fino</strong></td>
+                    <td class="highlight">✅ Sí</td>
+                    <td>❌ No</td>
+                    <td>⚠️ Difícil</td>
+                </tr>
+                <tr>
+                    <td><strong>Efecto exfoliante</strong></td>
+                    <td class="highlight">✅ Sí</td>
+                    <td>❌ No</td>
+                    <td>❌ No</td>
+                </tr>
+                <tr>
+                    <td><strong>Riesgo irritación</strong></td>
+                    <td class="highlight">Muy bajo</td>
+                    <td>Medio-Alto</td>
+                    <td>Bajo</td>
+                </tr>
+                <tr>
+                    <td><strong>Duración resultado</strong></td>
+                    <td>3-4 semanas</td>
+                    <td>3-4 semanas</td>
+                    <td>2-3 semanas</td>
+                </tr>
+                <tr>
+                    <td><strong>Precio</strong></td>
+                    <td>15-20€</td>
+                    <td>15-20€</td>
+                    <td>Gratis (DIY)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <div class="section-title">
+            <h2>¿Para Quién es Ideal la Depilación con Hilo?</h2>
+            <p>Descubre si esta técnica es perfecta para ti</p>
+        </div>
+
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Pieles Sensibles o Alérgicas</h3>
+                <p>Si tu piel reacciona mal a la cera, productos químicos o tienes alergias, el hilo es tu mejor opción.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Diseño de Cejas Perfecto</h3>
+                <p>Si quieres cejas impecables con líneas definidas y simétricas, la precisión del hilo es insuperable.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Tendencia al Acné</h3>
+                <p>El hilo no obstruye los poros ni introduce bacterias. Ideal si tu piel es propensa a brotes.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Quieres Piel Radiante</h3>
+                <p>Si buscas un efecto 2 en 1: depilación + exfoliación suave para una piel luminosa.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Uso de Retinoides</h3>
+                <p>Si usas retinol, ácidos o tratamientos que sensibilizan la piel, el hilo es más seguro que la cera.</p>
+            </div>
+
+            <div class="benefit-card">
+                <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                <h3>Prefieres Natural</h3>
+                <p>Si buscas métodos de belleza naturales sin químicos ni productos artificiales.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="price-box">
+            <h3>Inversión en BeautyBox Málaga</h3>
+            <div class="price">15€</div>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Depilación de Cejas con Hilo</p>
+            
+            <div class="price-includes">
+                <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;">Incluye:</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Diseño personalizado de cejas</li>
+                    <li><i class="fas fa-check"></i> Depilación completa con hilo</li>
+                    <li><i class="fas fa-check"></i> Definición perfecta de líneas</li>
+                    <li><i class="fas fa-check"></i> Hidratación post-depilación</li>
+                </ul>
+            </div>
+
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.3);">
+                <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">Zonas Adicionales:</p>
+                <p style="font-size: 1.2rem;">Labio superior: 8€</p>
+                <p style="font-size: 1.2rem;">Rostro completo: 25€</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Preguntas Frecuentes</h2>
+                <p>Todo lo que necesitas saber</p>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Duele la depilación con hilo?</div>
+                <div class="faq-answer">
+                    Es una sensación de pellizco rápido que dura solo segundos. La mayoría de nuestras clientas lo toleran muy bien y lo consideran menos doloroso que la cera. En la primera sesión puede ser más sensible, pero te acostumbras rápidamente.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cuánto dura el resultado?</div>
+                <div class="faq-answer">
+                    Entre 3 y 4 semanas, dependiendo de tu ciclo de crecimiento de vello. Con sesiones regulares, el vello crece más fino y el intervalo entre sesiones se puede alargar.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo hacerlo si tengo piel muy sensible?</div>
+                <div class="faq-answer">
+                    ¡Sí! De hecho, el hilo es el método más recomendado para pieles sensibles porque no usa químicos, calor ni adhesivos que puedan irritar. Solo debes evitarlo si tienes heridas abiertas o infecciones activas en la zona.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Qué zonas se pueden depilar con hilo?</div>
+                <div class="faq-answer">
+                    En BeautyBox nos especializamos en: cejas (lo más popular), labio superior, mentón, patillas y rostro completo. El hilo es ideal para zonas faciales donde se requiere precisión.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Cuánto tiempo tarda?</div>
+                <div class="faq-answer">
+                    La depilación de cejas con hilo toma aproximadamente 10-15 minutos. Es rápido y eficiente, perfecto para incluir en tu rutina de belleza mensual.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Puedo maquillarme después?</div>
+                <div class="faq-answer">
+                    Sí, puedes aplicar maquillaje inmediatamente después. La piel puede estar ligeramente enrojecida durante 30-60 minutos, pero puedes cubrirla sin problema. De hecho, tu maquillaje se verá aún mejor sobre la piel suave recién depilada.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">¿Es seguro durante el embarazo?</div>
+                <div class="faq-answer">
+                    Sí, la depilación con hilo es completamente segura durante el embarazo ya que no involucra químicos, calor ni productos que puedan afectar al bebé. Es una de las mejores opciones para futuras mamás.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Lista para Cejas Perfectamente Definidas?</h2>
+            <p>Descubre la precisión de la depilación con hilo</p>
+            <div class="hero-buttons" style="margin-top: 2rem;">
+                <a href="tel:+34XXXXXXXXX" class="btn-primary">
+                    <i class="fas fa-phone"></i> Llamar Ahora
+                </a>
+                <a href="https://wa.me/34XXXXXXXXX" class="btn-primary">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+            <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                📍 Av. del Arroyo de los Ángeles, 5, Distrito Centro, 29009 Málaga<br>
+                🕐 Lunes a Viernes: 10:00 - 20:00 | Sábados: 10:00 - 14:00
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>BeautyBox Málaga</strong> - Especialistas en Diseño de Cejas</p>
+        <p style="margin-top: 1rem;">
+            <a href="index.html">Inicio</a> | 
+            <a href="lifting-pestanas.html">Lifting</a> | 
+            <a href="nanoblading.html">Nanoblading</a> | 
+            <a href="index.html#contacto">Contacto</a>
+        </p>
+        <p style="margin-top: 1rem;">&copy; 2025 BeautyBox Málaga. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

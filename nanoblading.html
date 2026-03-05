@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nanoblading en Málaga - Cejas perfectas y naturales con la técnica más avanzada. Especialistas certificadas en BeautyBox Málaga. Resultados que duran 12-18 meses.">
+    <title>Nanoblading en Málaga | Cejas Perfectas - BeautyBox</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-color: #d4a5a5;
+            --secondary-color: #1a1a1a;
+            --accent-color: #c48b9f;
+            --light-bg: #f9f7f5;
+            --white: #ffffff;
+            --text-dark: #2c2c2c;
+            --text-light: #666666;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+        
+        /* Header */
+        header {
+            background: var(--white);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            display: block;
+            font-weight: 400;
+            margin-top: -5px;
+        }
+        
+        /* Hero Section */
+        .hero-service {
+            background: linear-gradient(135deg, rgba(26, 26, 26, 0.6), rgba(212, 165, 165, 0.4)), 
+                        url('https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 5% 6rem;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .hero-service h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero-service p {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .btn-primary:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(196, 139, 159, 0.4);
+        }
+        
+        /* Quick Info Bar */
+        .quick-info {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 2rem 5%;
+        }
+        
+        .quick-info-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .info-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .info-item strong {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+        
+        .benefit-card p {
+            color: var(--text-light);
+        }
+        
+        /* Process Timeline */
+        .process-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+        
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 50px 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            align-items: center;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content:first-child {
+            order: 3;
+        }
+        
+        .timeline-content {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+        
+        .timeline-content h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-marker {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .comparison-table td {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comparison-table tr:hover {
+            background: var(--light-bg);
+        }
+        
+        .comparison-table .highlight {
+            background: var(--primary-color);
+            color: var(--white);
+            font-weight: 600;
+        }
+        
+        /* Before After Gallery */
+        .before-after-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .before-after-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+        
+        .before-after-image {
+            height: 300px;
+            background: linear-gradient(135deg, var(--light-bg), var(--primary-color));
+            position: relative;
+        }
+        
+        .before-after-content {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .before-after-content h4 {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Pricing Section */
+        .pricing-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+            max-width: 600px;
+            margin: 2rem auto;
+            text-align: center;
+        }
+        
+        .price-tag {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        
+        .price-includes {
+            text-align: left;
+            margin: 2rem 0;
+        }
+        
+        .price-includes ul {
+            list-style: none;
+        }
+        
+        .price-includes li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .price-includes i {
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .faq-answer {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--light-bg);
+            padding: 5rem 5%;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 2rem 5%;
+            text-align: center;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-service h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .timeline-item {
+                grid-template-columns: 50px 1fr;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content:first-child {
+                order: 1;
+            }
+            
+            .timeline-content:first-child {
+                grid-column: 2;
+            }
+            
+            .comparison-table {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="/" class="logo">
+                BeautyBox
+                <span>Lashes & Brows</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-service">
+        <h1>Nanoblading en Málaga</h1>
+        <p>Cejas perfectas, naturales y definidas con la técnica más avanzada de micropigmentación</p>
+        <a href="#contacto" class="btn-primary">Reserva tu Consulta Gratuita</a>
+    </section>
+
+    <!-- Quick Info Bar -->
+    <div class="quick-info">
+        <div class="quick-info-content">
+            <div class="info-item">
+                <i class="fas fa-clock"></i>
+                <strong>Duración</strong>
+                <span>12-18 meses</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-euro-sign"></i>
+                <strong>Precio</strong>
+                <span>Desde 300€</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-heart-pulse"></i>
+                <strong>Recuperación</strong>
+                <span>24-48 horas</span>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-star"></i>
+                <strong>Resultados</strong>
+                <span>Ultra naturales</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- What is Nanoblading -->
+    <section>
+        <div class="section-title">
+            <h2>¿Qué es el Nanoblading?</h2>
+            <p>La técnica más avanzada para cejas perfectas</p>
+        </div>
+        
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.8; margin-bottom: 2rem;">
+                El nanoblading es una técnica revolucionaria de micropigmentación que utiliza una <strong>nanoaguja ultra fina</strong> para crear trazos individuales que imitan perfectamente el crecimiento natural del vello de las cejas. Es la evolución del microblading tradicional, ofreciendo resultados aún más naturales, delicados y duraderos.
+            </p>
+            <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.8;">
+                Cada trazo es tan fino (0.18mm) que resulta prácticamente indistinguible del pelo real, creando cejas que lucen <strong>completamente naturales</strong> desde cualquier distancia.
+            </p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section style="background: var(--light-bg);">
+        <div class="section-title">
+            <h2>¿Por Qué Elegir Nanoblading?</h2>
+            <p>Los 7 beneficios que transformarán tu mirada</p>
+        </div>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-feather"></i>
+                </div>
+                <h3>Trazos Ultra Finos</h3>
+                <p>Cada trazo mide solo 0.18mm, imitando perfectamente el grosor del pelo natural. Resultado imperceptible.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Máxima Naturalidad</h3>
+                <p>Nadie notará que llevas micropigmentación. Solo verán tus cejas perfectas y naturales.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Ideal para Pieles Sensibles</h3>
+                <p>Menos invasivo que el microblading. Perfecto para pieles maduras, delicadas o sensibles.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <h3>Diseño Personalizado</h3>
+                <p>Cada diseño se adapta a tu rostro mediante técnicas de visagismo profesional.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-hand-holding-medical"></i>
+                </div>
+                <h3>Menos Agresivo</h3>
+                <p>Recuperación en 24-48h vs 5-7 días del microblading. Mínimo dolor y molestia.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Larga Duración</h3>
+                <p>Resultados que duran entre 12 y 18 meses con los cuidados adecuados.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon">
+                    <i class="fas fa-droplet"></i>
+                </div>
+                <h3>Ideal para Pieles Grasas</h3>
+                <p>Los trazos finos retienen mejor el pigmento que el microblading tradicional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section>
+        <div class="section-title">
+            <h2>El Proceso Paso a Paso</h2>
+            <p>Qué esperar en tu tratamiento de nanoblading</p>
+        </div>
+        
+        <div class="process-timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>1. Consulta Inicial</h3>
+                    <p>Analizamos tu piel, diseñamos la forma perfecta mediante visagismo y seleccionamos el tono de pigmento ideal. Gratis y sin compromiso.</p>
+                </div>
+                <div class="timeline-marker">1</div>
+                <div></div>
+            </div>
+            
+            <div class="timeline-item">
+                <div></div>
+                <div class="timeline-marker">2</div>
+                <div class="timeline-content">
+                    <h3>2. Diseño y Aprobación</h3>
+                    <p>Dibujamos tus nuevas cejas y no empezamos hasta que estés 100% satisfecha con la forma y el diseño.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>3. Anestesia Tópica</h3>
+                    <p>Aplicamos anestésico tópico durante 15-20 minutos para maximizar tu comodidad. El nanoblading es prácticamente indoloro.</p>
+                </div>
+                <div class="timeline-marker">3</div>
+                <div></div>
+            </div>
+            
+            <div class="timeline-item">
+                <div></div>
+                <div class="timeline-marker">4</div>
+                <div class="timeline-content">
+                    <h3>4. Procedimiento</h3>
+                    <p>Creamos tus cejas perfectas pelo a pelo durante 60-90 minutos. Ambiente relajante y profesional.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>5. Cuidados Post-Tratamiento</h3>
+                    <p>Te entregamos un kit de cuidados completo con instrucciones detalladas. Recuperación en 24-48h.</p>
+                </div>
+                <div class="timeline-marker">5</div>
+                <div></div>
+            </div>
+            
+            <div class="timeline-item">
+                <div></div>
+                <div class="timeline-marker">6</div>
+                <div class="timeline-content">
+                    <h3>6. Retoque (4-6 semanas)</h3>
+                    <p>Sesión esencial para reforzar el color y garantizar la durabilidad. Incluida en el precio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section style="background: var(--light-bg);">
+        <div class="section-title">
+            <h2>Nanoblading vs Microblading</h2>
+            <p>Comparación detallada de ambas técnicas</p>
+        </div>
+        
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Característica</th>
+                    <th>Microblading</th>
+                    <th class="highlight">Nanoblading</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Herramienta</strong></td>
+                    <td>Hoja con múltiples agujas</td>
+                    <td>Nanoaguja individual</td>
+                </tr>
+                <tr>
+                    <td><strong>Grosor del trazo</strong></td>
+                    <td>0.25mm</td>
+                    <td>0.18mm (40% más fino)</td>
+                </tr>
+                <tr>
+                    <td><strong>Apariencia</strong></td>
+                    <td>Natural</td>
+                    <td>Ultra natural</td>
+                </tr>
+                <tr>
+                    <td><strong>Dolor/Molestia</strong></td>
+                    <td>Leve-moderado</td>
+                    <td>Mínimo</td>
+                </tr>
+                <tr>
+                    <td><strong>Recuperación</strong></td>
+                    <td>5-7 días</td>
+                    <td>24-48 horas</td>
+                </tr>
+                <tr>
+                    <td><strong>Pieles grasas</strong></td>
+                    <td>Regular</td>
+                    <td>Excelente</td>
+                </tr>
+                <tr>
+                    <td><strong>Pieles maduras</strong></td>
+                    <td>Regular</td>
+                    <td>Excelente</td>
+                </tr>
+                <tr>
+                    <td><strong>Precio</strong></td>
+                    <td>250-300€</td>
+                    <td>300-350€</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Pricing Section -->
+    <section>
+        <div class="section-title">
+            <h2>Inversión en Tu Belleza</h2>
+            <p>Tratamiento completo con todo incluido</p>
+        </div>
+        
+        <div class="pricing-card">
+            <h3>Nanoblading Completo</h3>
+            <div class="price-tag">300€</div>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">Tratamiento completo con garantía de resultados</p>
+            
+            <div class="price-includes">
+                <ul>
+                    <li><i class="fas fa-check"></i> Consulta y diseño personalizado</li>
+                    <li><i class="fas fa-check"></i> Sesión inicial completa (2-2.5 horas)</li>
+                    <li><i class="fas fa-check"></i> Sesión de retoque (4-6 semanas después)</li>
+                    <li><i class="fas fa-check"></i> Kit de cuidados post-tratamiento</li>
+                    <li><i class="fas fa-check"></i> Seguimiento personalizado</li>
+                    <li><i class="fas fa-check"></i> Garantía de satisfacción</li>
+                </ul>
+            </div>
+            
+            <a href="#contacto" class="btn-primary">Reserva Ahora</a>
+            
+            <p style="margin-top: 2rem; color: var(--text-light); font-size: 0.9rem;">
+                <strong>¿Prefieres pagar en cuotas?</strong> Pregúntanos por nuestras opciones de financiación.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="background: var(--light-bg);">
+        <div class="section-title">
+            <h2>Preguntas Frecuentes</h2>
+            <p>Resolvemos todas tus dudas</p>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">¿Duele el nanoblading?</div>
+            <div class="faq-answer">
+                No, es prácticamente indoloro. Aplicamos anestésico tópico antes y durante el procedimiento. La mayoría de nuestras clientas califican la molestia como 2-3 de 10, menos que una depilación de cejas.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">¿Cuánto dura el nanoblading?</div>
+            <div class="faq-answer">
+                Entre 12 y 18 meses, dependiendo de tu tipo de piel, cuidados post-tratamiento y exposición solar. Con el retoque anual, puedes mantener tus cejas perfectas indefinidamente.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">¿Cuánto tiempo dura la sesión?</div>
+            <div class="faq-answer">
+                La primera sesión dura aproximadamente 2-2.5 horas, incluyendo diseño, anestesia y procedimiento. El retoque es más rápido, alrededor de 60-90 minutos.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">¿Puedo hacerlo si tengo piel grasa?</div>
+            <div class="faq-answer">
+                ¡Sí! De hecho, el nanoblading es ideal para pieles grasas. Los trazos ultra finos retienen mejor el pigmento que el microblading tradicional en este tipo de piel.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">¿Necesito cuidados especiales después?</div>
+            <div class="faq-answer">
+                Los primeros 7-10 días debes evitar mojar las cejas directamente, ir a piscina/sauna, y hacer ejercicio intenso. Te proporcionamos instrucciones detalladas y un kit completo de cuidados.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">¿Cuál es la diferencia con el microblading?</div>
+            <div class="faq-answer">
+                El nanoblading usa una nanoaguja individual más fina (0.18mm vs 0.25mm), creando trazos más naturales. Es menos invasivo, tiene recuperación más rápida (24-48h vs 5-7 días) y funciona mejor en pieles grasas y maduras.
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>¿Lista para Tener las Cejas de Tus Sueños?</h2>
+        <p>Reserva tu consulta gratuita y sin compromiso</p>
+        
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+            <a href="tel:+34XXXXXXXXX" class="btn-primary">
+                <i class="fas fa-phone"></i> Llamar Ahora
+            </a>
+            <a href="https://wa.me/34XXXXXXXXX" class="btn-primary">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+        
+        <div style="margin-top: 3rem; color: var(--text-light);">
+            <p><strong>BeautyBox Málaga</strong></p>
+            <p>Av. del Arroyo de los Ángeles, 5, Distrito Centro, 29009 Málaga</p>
+            <p>Lunes a Viernes: 10:00 - 20:00 | Sábados: 10:00 - 14:00</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 BeautyBox Málaga. Todos los derechos reservados.</p>
+        <p style="margin-top: 1rem;">
+            <a href="https://instagram.com/beautybox_malaga" style="color: var(--primary-color); text-decoration: none;">
+                <i class="fab fa-instagram"></i> @beautybox_malaga
+            </a>
+        </p>
+    </footer>
+</body>
+</html>
