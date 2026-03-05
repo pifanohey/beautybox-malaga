@@ -47,20 +47,30 @@
         .btn-primary{background:var(--primary-color);color:var(--white);padding:.8rem 2rem;border-radius:30px;text-decoration:none;font-weight:500;transition:var(--transition);border:none;cursor:pointer;display:inline-block}
         .btn-primary:hover{background:var(--accent-color);transform:translateY(-2px);box-shadow:0 5px 20px rgba(196,139,159,.3)}
         .menu-toggle{display:none;font-size:1.5rem;cursor:pointer;color:var(--secondary-color)}
-        .hero{margin-top:80px;height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:#1a1a1a}
-        .hero-video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:0;object-fit:cover;filter:brightness(0.7)}
-        .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at center,rgba(26,26,26,0.3) 0%,rgba(26,26,26,0.75) 100%);z-index:1}
-        .hero-content{max-width:800px;padding:3.5rem 4rem;animation:fadeInUp 1s ease;position:relative;z-index:2;background:rgba(255,255,255,0.1);border-radius:20px;box-shadow:0 8px 32px rgba(0,0,0,0.25);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.18)}
-        .hero h1{font-size:3.8rem;color:#fff;margin-bottom:1rem;line-height:1.15;text-shadow:0 2px 15px rgba(0,0,0,0.3);letter-spacing:0.5px}
-        .hero p{font-size:1.15rem;color:rgba(255,255,255,0.88);margin-bottom:2rem;font-weight:300;letter-spacing:0.3px}
-        .hero-decorator{display:flex;align-items:center;justify-content:center;gap:.8rem;margin-bottom:1.5rem}
-        .hero-decorator span{width:40px;height:1px;background:rgba(255,255,255,0.4)}
-        .hero-decorator i{color:var(--primary-color);font-size:.8rem;opacity:.9}
-        .hero .btn-primary{background:var(--primary-color);box-shadow:0 4px 20px rgba(212,165,165,0.4)}
-        .hero .btn-primary:hover{background:var(--accent-color);box-shadow:0 6px 25px rgba(196,139,159,0.5)}
-        .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-        .btn-secondary{background:transparent;color:#fff;padding:.8rem 2rem;border-radius:30px;text-decoration:none;font-weight:500;transition:var(--transition);border:1.5px solid rgba(255,255,255,0.5);box-shadow:none}
-        .btn-secondary:hover{background:rgba(255,255,255,0.15);color:#fff;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.15);border-color:rgba(255,255,255,0.8)}
+        .hero{margin-top:80px;height:100vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;background:#1a1a1a}
+        .hero-video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:0;object-fit:cover;filter:brightness(0.55)}
+        .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,rgba(0,0,0,0.15) 50%,rgba(0,0,0,0.25) 100%);z-index:1}
+        .hero-marquee{position:relative;z-index:2;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1);background:rgba(0,0,0,0.3);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:.7rem 0;overflow:hidden;margin-bottom:2rem}
+        .marquee-track{display:flex;gap:3rem;animation:marqueeScroll 28s linear infinite;width:max-content}
+        .marquee-item{display:flex;align-items:center;gap:.6rem;white-space:nowrap}
+        .marquee-value{color:var(--primary-color);font-weight:700;font-size:.9rem;letter-spacing:.05em}
+        .marquee-label{color:rgba(255,255,255,0.7);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;font-weight:500}
+        .marquee-emoji{font-size:.9rem}
+        @keyframes marqueeScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+        .hero-split{position:relative;z-index:2;display:flex;padding:0 5% 4rem;gap:3rem;align-items:flex-end;width:100%;max-width:1400px;margin:0 auto;animation:fadeInUp 1s ease}
+        .hero-left{flex:1}
+        .hero-left h1{font-size:4.2rem;color:#fff;font-weight:500;line-height:1.08;letter-spacing:-0.5px;margin-bottom:1.8rem;text-shadow:0 2px 20px rgba(0,0,0,0.3)}
+        .hero-left h1 .accent{color:var(--primary-color)}
+        .btn-cta{display:inline-flex;align-items:center;background:var(--primary-color);color:#fff;text-decoration:none;font-size:1rem;font-weight:500;transition:var(--transition);border-radius:4px;overflow:hidden}
+        .btn-cta:hover{background:var(--accent-color);transform:translateY(-2px);box-shadow:0 8px 25px rgba(212,165,165,0.4)}
+        .btn-cta-text{padding:.85rem 1.5rem}
+        .btn-cta-arrow{border-left:1px solid rgba(255,255,255,0.3);padding:.85rem 1.1rem;display:flex;align-items:center}
+        .hero-right{flex:1}
+        .hero-right p{color:var(--primary-color);font-style:italic;font-size:1.3rem;text-align:right;line-height:1.7;font-family:'Cormorant Garamond',serif}
+        .hero-reviews{margin-top:1.2rem;text-align:right}
+        .hero-reviews a{color:rgba(255,255,255,0.5);font-size:.85rem;text-decoration:none;transition:var(--transition);letter-spacing:.3px}
+        .hero-reviews a:hover{color:#fff}
+        .hero-reviews i{margin-right:.4rem}
         section{padding:5rem 5%;max-width:1400px;margin:0 auto}
         .section-title{text-align:center;margin-bottom:3rem}
         .section-title h2{font-size:3rem;color:var(--secondary-color);margin-bottom:1rem}
@@ -107,10 +117,8 @@
         .btn-google{background:#4285f4;color:var(--white);padding:.8rem 1.5rem;border-radius:30px;text-decoration:none;font-weight:500;display:inline-flex;align-items:center;gap:.5rem;transition:var(--transition);margin-top:.5rem}
         .btn-google:hover{background:#3367d6;transform:translateY(-2px);box-shadow:0 5px 20px rgba(66,133,244,.3)}
         
-        /* Google Rating in Hero */
-        .google-rating-hero{background:rgba(255,255,255,0.08);padding:.8rem 1.8rem;border-radius:50px;display:inline-flex;align-items:center;gap:.8rem;margin:1.5rem 0;box-shadow:none;border:1px solid rgba(255,255,255,0.18)}
+        /* Rating stars (used in testimonials) */
         .rating-stars{font-size:1.2rem}
-        .rating-text{color:rgba(255,255,255,0.9);font-size:.95rem;font-weight:400}
         
         /* Testimonials Grid */
         .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem;max-width:1200px;margin-left:auto;margin-right:auto}
@@ -563,10 +571,11 @@
             .nav-links.active{left:0}
             .nav-links a{font-size:1rem}
             .menu-toggle{display:block}
-            .hero{height:80vh}
-            .hero-content{padding:2rem;border-radius:20px}
-            .hero h1{font-size:2.5rem}
-            .hero p{font-size:1.1rem}
+            .hero{height:100vh}
+            .hero-split{flex-direction:column;padding:0 5% 3rem;gap:1.5rem;align-items:flex-start}
+            .hero-left h1{font-size:2.8rem}
+            .hero-right p{text-align:left;font-size:1.1rem}
+            .hero-reviews{text-align:left}
             .section-title h2{font-size:2rem}
             .about-content,.contact-content{grid-template-columns:1fr}
             .features{grid-template-columns:1fr}
@@ -580,10 +589,13 @@
         
         @media(max-width:480px){
             section{padding:3rem 5%}
-            .hero{height:70vh}
-            .hero-content{padding:1.5rem;border-radius:15px}
-            .hero h1{font-size:1.8rem}
-            .hero p{font-size:0.95rem}
+            .hero{height:100vh}
+            .hero-split{padding:0 5% 2rem;gap:1rem}
+            .hero-left h1{font-size:2rem}
+            .hero-right p{font-size:1rem}
+            .hero-marquee{margin-bottom:1.5rem}
+            .marquee-value{font-size:.8rem}
+            .marquee-label{font-size:.7rem}
             .services-grid{grid-template-columns:1fr}
             .before-after-image {height: 200px}
             .portfolio-grid {
@@ -649,17 +661,38 @@
         <video autoplay loop muted playsinline class="hero-video">
             <source src="Imagenes/servicios/Portada extensiones de pestanas.mp4" type="video/mp4">
         </video>
-        <div class="hero-content">
-            <div class="hero-decorator"><span></span><i class="fas fa-gem"></i><span></span></div>
-            <h1 id="heroTitle" data-en="Enhancing your natural beauty in the heart of Málaga">Realzando tu belleza natural en el corazón de Málaga</h1>
-            <p id="heroSubtitle" data-en="Specialists in lash extensions, brow design and professional beauty treatments">Especialistas en diseño de pestañas, cejas y manicura con técnicas de última generación</p>
-            <div class="google-rating-hero">
-                <div class="rating-stars">⭐⭐⭐⭐⭐</div>
-                <div class="rating-text"><strong>4.9/5</strong> <span data-en="based on">basado en</span> <a href="https://maps.app.goo.gl/MQveqQVp2K6LsMCS6" target="_blank" style="color: inherit; text-decoration: underline;"><span data-en="60 Google reviews">60 reseñas de Google</span></a></div>
+
+        <div class="hero-marquee">
+            <div class="marquee-track">
+                <div class="marquee-item"><span class="marquee-value">4.9/5</span><span class="marquee-label" data-en="Google Reviews">Google Reviews</span><span class="marquee-emoji">⭐</span></div>
+                <div class="marquee-item"><span class="marquee-value">60+</span><span class="marquee-label" data-en="5-Star Reviews">Reseñas 5 Estrellas</span><span class="marquee-emoji">✨</span></div>
+                <div class="marquee-item"><span class="marquee-value" data-en="Downtown">Centro</span><span class="marquee-label" data-en="Málaga">de Málaga</span><span class="marquee-emoji">📍</span></div>
+                <div class="marquee-item"><span class="marquee-value">+5</span><span class="marquee-label" data-en="Years of Experience">Años de Experiencia</span><span class="marquee-emoji">💫</span></div>
+                <div class="marquee-item"><span class="marquee-value">4.9/5</span><span class="marquee-label" data-en="Google Reviews">Google Reviews</span><span class="marquee-emoji">⭐</span></div>
+                <div class="marquee-item"><span class="marquee-value">60+</span><span class="marquee-label" data-en="5-Star Reviews">Reseñas 5 Estrellas</span><span class="marquee-emoji">✨</span></div>
+                <div class="marquee-item"><span class="marquee-value" data-en="Downtown">Centro</span><span class="marquee-label" data-en="Málaga">de Málaga</span><span class="marquee-emoji">📍</span></div>
+                <div class="marquee-item"><span class="marquee-value">+5</span><span class="marquee-label" data-en="Years of Experience">Años de Experiencia</span><span class="marquee-emoji">💫</span></div>
             </div>
-            <div class="hero-buttons">
-                <a href="reservar-cita.html" class="btn-primary" id="heroBookBtn" data-en="Book Your Appointment Now">Reserva tu Cita Ahora</a>
-                <a href="#servicios" class="btn-secondary" data-en="View Services">Ver Servicios</a>
+        </div>
+
+        <div class="hero-split">
+            <div class="hero-left">
+                <h1 id="heroTitle">
+                    <span data-en="Enhancing your natural">Realzando tu</span>
+                    <span class="accent" data-en="beauty">belleza</span>
+                    <span data-en="in the heart of">natural en el corazón de</span>
+                    <span class="accent">Málaga</span>
+                </h1>
+                <a href="reservar-cita.html" class="btn-cta" id="heroBookBtn">
+                    <span class="btn-cta-text" data-en="Book Your Appointment">Reserva tu Cita</span>
+                    <span class="btn-cta-arrow"><i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+            <div class="hero-right">
+                <p id="heroSubtitle" data-en="Specialists in lash extensions, brow design and professional manicure with cutting-edge techniques">Especialistas en diseño de pestañas, cejas y manicura con técnicas de última generación</p>
+                <div class="hero-reviews">
+                    <a href="https://maps.app.goo.gl/MQveqQVp2K6LsMCS6" target="_blank"><i class="fab fa-google"></i> <span data-en="See our reviews on Google">Ver nuestras reseñas en Google</span></a>
+                </div>
             </div>
         </div>
     </section>
