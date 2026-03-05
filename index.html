@@ -50,12 +50,17 @@
         .hero{margin-top:80px;height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;background:#1a1a1a}
         .hero-video{position:absolute;top:50%;left:50%;min-width:100%;min-height:100%;width:auto;height:auto;transform:translate(-50%,-50%);z-index:0;object-fit:cover;filter:brightness(0.7)}
         .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at center,rgba(26,26,26,0.3) 0%,rgba(26,26,26,0.75) 100%);z-index:1}
-        .hero-content{max-width:800px;padding:3rem;animation:fadeInUp 1s ease;position:relative;z-index:2;background:rgba(255,255,255,0.95);border-radius:25px;box-shadow:0 20px 60px rgba(0,0,0,0.3);backdrop-filter:blur(10px)}
-        .hero h1{font-size:4rem;color:var(--secondary-color);margin-bottom:1rem;line-height:1.2;text-shadow:none}
-        .hero p{font-size:1.3rem;color:var(--text-dark);margin-bottom:2rem;font-weight:400}
+        .hero-content{max-width:800px;padding:3.5rem 4rem;animation:fadeInUp 1s ease;position:relative;z-index:2;background:rgba(255,255,255,0.1);border-radius:20px;box-shadow:0 8px 32px rgba(0,0,0,0.25);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.18)}
+        .hero h1{font-size:3.8rem;color:#fff;margin-bottom:1rem;line-height:1.15;text-shadow:0 2px 15px rgba(0,0,0,0.3);letter-spacing:0.5px}
+        .hero p{font-size:1.15rem;color:rgba(255,255,255,0.88);margin-bottom:2rem;font-weight:300;letter-spacing:0.3px}
+        .hero-decorator{display:flex;align-items:center;justify-content:center;gap:.8rem;margin-bottom:1.5rem}
+        .hero-decorator span{width:40px;height:1px;background:rgba(255,255,255,0.4)}
+        .hero-decorator i{color:var(--primary-color);font-size:.8rem;opacity:.9}
+        .hero .btn-primary{background:var(--primary-color);box-shadow:0 4px 20px rgba(212,165,165,0.4)}
+        .hero .btn-primary:hover{background:var(--accent-color);box-shadow:0 6px 25px rgba(196,139,159,0.5)}
         .hero-buttons{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-        .btn-secondary{background:var(--white);color:var(--secondary-color);padding:.8rem 2rem;border-radius:30px;text-decoration:none;font-weight:500;transition:var(--transition);border:2px solid var(--secondary-color);box-shadow:0 4px 15px rgba(0,0,0,0.1)}
-        .btn-secondary:hover{background:var(--secondary-color);color:var(--white);transform:translateY(-2px);box-shadow:0 6px 20px rgba(26,26,26,0.3)}
+        .btn-secondary{background:transparent;color:#fff;padding:.8rem 2rem;border-radius:30px;text-decoration:none;font-weight:500;transition:var(--transition);border:1.5px solid rgba(255,255,255,0.5);box-shadow:none}
+        .btn-secondary:hover{background:rgba(255,255,255,0.15);color:#fff;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,0.15);border-color:rgba(255,255,255,0.8)}
         section{padding:5rem 5%;max-width:1400px;margin:0 auto}
         .section-title{text-align:center;margin-bottom:3rem}
         .section-title h2{font-size:3rem;color:var(--secondary-color);margin-bottom:1rem}
@@ -103,9 +108,9 @@
         .btn-google:hover{background:#3367d6;transform:translateY(-2px);box-shadow:0 5px 20px rgba(66,133,244,.3)}
         
         /* Google Rating in Hero */
-        .google-rating-hero{background:var(--light-bg);padding:1rem 2rem;border-radius:50px;display:inline-flex;align-items:center;gap:1rem;margin:1.5rem 0;box-shadow:0 5px 20px rgba(212,165,165,.3);border:2px solid var(--primary-color)}
-        .rating-stars{font-size:1.3rem}
-        .rating-text{color:var(--text-dark);font-size:1rem;font-weight:500}
+        .google-rating-hero{background:rgba(255,255,255,0.08);padding:.8rem 1.8rem;border-radius:50px;display:inline-flex;align-items:center;gap:.8rem;margin:1.5rem 0;box-shadow:none;border:1px solid rgba(255,255,255,0.18)}
+        .rating-stars{font-size:1.2rem}
+        .rating-text{color:rgba(255,255,255,0.9);font-size:.95rem;font-weight:400}
         
         /* Testimonials Grid */
         .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:3rem;max-width:1200px;margin-left:auto;margin-right:auto}
@@ -645,6 +650,7 @@
             <source src="Imagenes/servicios/Portada extensiones de pestanas.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
+            <div class="hero-decorator"><span></span><i class="fas fa-gem"></i><span></span></div>
             <h1 id="heroTitle" data-en="Enhancing your natural beauty in the heart of Málaga">Realzando tu belleza natural en el corazón de Málaga</h1>
             <p id="heroSubtitle" data-en="Specialists in lash extensions, brow design and professional beauty treatments">Especialistas en diseño de pestañas, cejas y manicura con técnicas de última generación</p>
             <div class="google-rating-hero">
