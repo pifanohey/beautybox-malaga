@@ -177,7 +177,12 @@
         .form-group textarea{min-height:150px;resize:vertical}
         .map-container{margin-top:3rem;border-radius:15px;overflow:hidden;height:400px}
         .map-container iframe{width:100%;height:100%;border:none}
-        footer{background:var(--secondary-color);color:var(--white);padding:4rem 5%;text-align:center}
+        footer{background:var(--secondary-color);color:var(--white);padding:4rem 5%;text-align:center;position:relative;overflow:hidden}
+        .footer-glow{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0}
+        .footer-glow::before{content:'';position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(212,165,165,0.08) 0%,transparent 70%);top:-10%;left:10%;animation:glowDrift1 18s ease-in-out infinite}
+        .footer-glow::after{content:'';position:absolute;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(196,139,159,0.06) 0%,transparent 70%);bottom:5%;right:15%;animation:glowDrift2 22s ease-in-out infinite}
+        @keyframes glowDrift1{0%,100%{transform:translate(0,0)}25%{transform:translate(60px,30px)}50%{transform:translate(20px,50px)}75%{transform:translate(-40px,20px)}}
+        @keyframes glowDrift2{0%,100%{transform:translate(0,0)}25%{transform:translate(-40px,-20px)}50%{transform:translate(30px,-40px)}75%{transform:translate(50px,10px)}}
         .footer-content{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:3rem;text-align:left}
         .footer-section h3{font-size:1.5rem;margin-bottom:1.5rem;color:var(--primary-color)}
         .footer-section a,.footer-section p{color:rgba(255,255,255,.8);text-decoration:none;display:block;margin-bottom:.8rem;transition:var(--transition)}
@@ -1524,7 +1529,8 @@
 
     <!-- FOOTER ORIGINAL -->
     <footer>
-        <div class="footer-content">
+        <div class="footer-glow"></div>
+        <div class="footer-content" style="position:relative;z-index:1">
             <div class="footer-section">
                 <h3>BeautyBox Málaga</h3>
                 <p>Tu estudio de belleza especializado en pestañas, cejas y manicura en el centro de Málaga.</p>
@@ -1574,7 +1580,7 @@
                 <p>Domingo<br>Cerrado</p>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-bottom" style="position:relative;z-index:1">
             <p>&copy; 2026 BeautyBox Málaga. Todos los derechos reservados.</p>
         </div>
     </footer>
