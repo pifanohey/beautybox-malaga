@@ -373,6 +373,20 @@
     <script>
         // Configuración
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyryzEEQsJfolNYao-h4fxSmeZa0yupOhh-8vdjdD7wyfgtd5AZSR50A3wJwG0uJPJtOw/exec';
+
+        // Capturar parámetros UTM al cargar la página (sobreviven aunque cambien de tab si los persistimos)
+        // Formato típico de un anuncio Meta:
+        //   ?utm_source=meta&utm_medium=cpc&utm_campaign=nanoblading_junio
+        const urlParams = new URLSearchParams(window.location.search);
+        const utm = {
+            source: urlParams.get('utm_source') || sessionStorage.getItem('utm_source') || '',
+            medium: urlParams.get('utm_medium') || sessionStorage.getItem('utm_medium') || '',
+            campaign: urlParams.get('utm_campaign') || sessionStorage.getItem('utm_campaign') || '',
+        };
+        // Persistir en sessionStorage para que sobreviva navegación entre páginas
+        if (utm.source) sessionStorage.setItem('utm_source', utm.source);
+        if (utm.medium) sessionStorage.setItem('utm_medium', utm.medium);
+        if (utm.campaign) sessionStorage.setItem('utm_campaign', utm.campaign);
         
         // Elementos del DOM
         const form = document.getElementById('bookingForm');
@@ -458,14 +472,17 @@
             submitBtn.querySelector('.btn-text').textContent = 'Enviando...';
             messageBox.classList.remove('show');
             
-            // Recoger datos del formulario
+            // Recoger datos del formulario (incluye UTMs si vino de un anuncio)
             const formData = {
                 client_name: document.getElementById('name').value,
                 phone: document.getElementById('phone').value,
                 email: document.getElementById('email').value,
                 service: document.getElementById('service').value,
                 date: document.getElementById('date').value,
-                time: document.getElementById('time').value
+                time: document.getElementById('time').value,
+                utm_source: utm.source,
+                utm_medium: utm.medium,
+                utm_campaign: utm.campaign
             };
             
             try {
