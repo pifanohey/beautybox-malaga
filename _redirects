@@ -1,0 +1,21 @@
+# 301: consolidar .html -> URL limpia (reservar-cita.html excluida a propósito: destino de ads con UTM)
+/index.html    /    301!
+/aviso-legal.html    /aviso-legal    301!
+/condiciones-servicio.html    /condiciones-servicio    301!
+/depilacion-hilo.html    /depilacion-hilo    301!
+/extensiones-clasicas.html    /extensiones-clasicas    301!
+/extensiones-hibridas.html    /extensiones-hibridas    301!
+/laminado-cejas.html    /laminado-cejas    301!
+/lifting-pestanas.html    /lifting-pestanas    301!
+/microblading.html    /microblading    301!
+/micropigmentacion.html    /micropigmentacion    301!
+/nanoblading.html    /nanoblading    301!
+/politica-cookies.html    /politica-cookies    301!
+/politica-privacidad.html    /politica-privacidad    301!
+/volumen-ruso.html    /volumen-ruso    301!
+/blog/candidata-nanoblading.html    /blog/candidata-nanoblading    301!
+/blog/cuidados-post-nanoblading.html    /blog/cuidados-post-nanoblading    301!
+/blog/nanoblading-malaga-guia.html    /blog/nanoblading-malaga-guia    301!
+/blog/nanoblading-pieles-maduras.html    /blog/nanoblading-pieles-maduras    301!
+/blog/nanoblading-precio-malaga.html    /blog/nanoblading-precio-malaga    301!
+/blog/nanoblading-vs-microblading.html    /blog/nanoblading-vs-microblading    301!
