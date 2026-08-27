@@ -286,6 +286,33 @@
                 grid-template-columns: 1fr;
             }
         }
+    
+        /* Botón flotante de WhatsApp — vía rápida para quien no quiere rellenar */
+        .wa-float{
+            position:fixed; right:18px; bottom:18px; z-index:999;
+            display:flex; align-items:center; gap:10px;
+            background:#25D366; color:#fff; text-decoration:none;
+            padding:13px 18px; border-radius:999px; font-weight:600; font-size:15px;
+            box-shadow:0 6px 22px rgba(0,0,0,.22);
+            transition:transform .18s ease, box-shadow .18s ease;
+        }
+        .wa-float:hover{transform:translateY(-2px); box-shadow:0 10px 28px rgba(0,0,0,.28);}
+        .wa-float:active{transform:scale(.97);}
+        .wa-float i{font-size:21px;}
+        @media (max-width:600px){ .wa-float span{display:none;} .wa-float{padding:15px;} }
+        @media (prefers-reduced-motion:reduce){ .wa-float{transition:none;} }
+        /* Atajo dentro de la tarjeta, antes de los campos */
+        .wa-inline{
+            display:flex; align-items:center; justify-content:center; gap:9px;
+            background:#fff; border:1.5px solid #25D366; color:#128C7E;
+            text-decoration:none; padding:12px 16px; border-radius:10px;
+            font-weight:600; font-size:15px; margin-bottom:18px;
+        }
+        .wa-inline:hover{background:#F2FBF5;}
+        .wa-or{
+            text-align:center; color:#9a9a9a; font-size:13px;
+            letter-spacing:.08em; text-transform:uppercase; margin-bottom:16px;
+        }
     </style>
 </head>
 <body>
@@ -302,6 +329,11 @@
             
             <div class="form-body">
                 <div class="message-box" id="messageBox"></div>
+
+                <a class="wa-inline" href="https://wa.me/34642841932?text=Hola%20Beauty%20Box!%20Quiero%20informaci%C3%B3n%20y%20reservar%20una%20cita%20%F0%9F%92%95" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Prefiero escribir por WhatsApp
+                </a>
+                <div class="wa-or">o rellena el formulario</div>
                 
                 <form id="bookingForm">
                     <div class="form-group">
@@ -331,11 +363,11 @@
                             <option value="Extensiones de Pestañas 3D" data-price="80">Extensiones de Pestañas 3D - 80€</option>
                             <option value="Extensiones Volumen Ruso" data-price="80">Extensiones Volumen Ruso - 80€</option>
                             <option value="Lifting de Pestañas con tinte" data-price="50">Lifting de Pestañas con tinte - 50€</option>
-                            <option value="Microblading o Nanoblading" data-price="200">Microblading o Nanoblading - 200€</option>
-                            <option value="Micropigmentación de Cejas" data-price="250">Micropigmentación de Cejas - 250€</option>
+                            <option value="Microblading o Nanoblading" data-price="235">Microblading o Nanoblading - 235€</option>
+                            <option value="Micropigmentación de Cejas" data-price="235">Micropigmentación de Cejas - 235€</option>
                             <option value="Laminado de Cejas" data-price="45">Laminado de Cejas - 45€</option>
                             <option value="Diseño de Cejas con Henna" data-price="35">Diseño de Cejas con Henna - 35€</option>
-                            <option value="Depilación con hilo" data-price="10">Depilación con hilo - 10€</option>
+                            <option value="Depilación con hilo" data-price="15">Depilación con hilo - 15€</option>
                             <option value="Micropigmentación de Labios" data-price="280">Micropigmentación de Labios - 280€</option>
                             <option value="Micropigmentación de Ojos" data-price="220">Micropigmentación de Ojos - 220€</option>
                             <option value="Manicura Rusa con Nivelación" data-price="25">Manicura Rusa con Nivelación - 25€</option>
@@ -535,5 +567,8 @@
             this.value = this.value.replace(/[^\d\s\-+]/g, '');
         });
     </script>
+    <a class="wa-float" href="https://wa.me/34642841932?text=Hola%20Beauty%20Box!%20Quiero%20informaci%C3%B3n%20y%20reservar%20una%20cita%20%F0%9F%92%95" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+        <i class="fab fa-whatsapp"></i><span>WhatsApp</span>
+    </a>
 </body>
 </html>
