@@ -871,7 +871,7 @@
     </header>
 
     <section class="hero" id="inicio">
-        <video autoplay loop muted playsinline class="hero-video">
+        <video autoplay loop muted playsinline preload="auto" poster="Imagenes/posters/Portada extensiones de pestanas.jpg" class="hero-video">
             <source src="Imagenes/servicios/Portada extensiones de pestanas.mp4" type="video/mp4">
         </video>
 
@@ -919,7 +919,7 @@
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-image">
-                    <video autoplay loop muted playsinline>
+                    <video loop muted playsinline preload="none" poster="Imagenes/posters/Portada extensiones de pestanas.jpg" data-lazy-video>
                         <source src="Imagenes/servicios/Portada extensiones de pestanas.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -1055,7 +1055,7 @@
             <!-- Ejemplo 2: Volumen Ruso -->
             <div class="portfolio-item" data-category="volumen">
                 <div class="portfolio-image">
-                    <video autoplay loop muted playsinline>
+                    <video loop muted playsinline preload="none" poster="Imagenes/posters/Pestañas_20250106_094549_0001.jpg" data-lazy-video>
                         <source src="Imagenes/Extensiones de Pestañas/Pestañas_20250106_094549_0001.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay">
@@ -1103,7 +1103,7 @@
             <!-- Ejemplo 4: Híbrido -->
             <div class="portfolio-item" data-category="hibrido">
                 <div class="portfolio-image">
-                    <video autoplay loop muted playsinline>
+                    <video loop muted playsinline preload="none" poster="Imagenes/posters/italian summer_20250420_121559_0001.jpg" data-lazy-video>
                         <source src="Imagenes/Extensiones de Pestañas/italian summer_20250420_121559_0001.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay">
@@ -1151,7 +1151,7 @@
             <!-- Ejemplo 6: Wet Look -->
             <div class="portfolio-item" data-category="volumen">
                 <div class="portfolio-image">
-                    <video autoplay loop muted playsinline>
+                    <video loop muted playsinline preload="none" poster="Imagenes/posters/Extensiones de pestañas_20250423_105621_0001.jpg" data-lazy-video>
                         <source src="Imagenes/Extensiones de Pestañas/Extensiones de pestañas_20250423_105621_0001.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay">
@@ -1274,7 +1274,7 @@
             <!-- Ejemplo 1: Nanoblading Natural -->
             <div class="portfolio-item" data-category-micro="nanoblading">
                 <div class="portfolio-image">
-                    <video autoplay loop muted playsinline>
+                    <video loop muted playsinline preload="none" poster="Imagenes/posters/Nanoblading_20250226_082711_0001.jpg" data-lazy-video>
                         <source src="Imagenes/Microblading/Nanoblading_20250226_082711_0001.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay">
@@ -1345,7 +1345,7 @@
             <!-- Ejemplo 4: Estilo Ombré -->
             <div class="portfolio-item" data-category-micro="ombre">
                 <div class="portfolio-image">
-                    <video autoplay loop muted playsinline>
+                    <video loop muted playsinline preload="none" poster="Imagenes/posters/Tu Historia Animada Antes y Después Peluquería Dinámico Marrón Y Amarillo_20241124_122214_0003.jpg" data-lazy-video>
                         <source src="Imagenes/Microblading/Tu Historia Animada Antes y Después Peluquería Dinámico Marrón Y Amarillo_20241124_122214_0003.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay">
@@ -1393,7 +1393,7 @@
             <!-- Ejemplo 6: Resultado Natural -->
             <div class="portfolio-item" data-category-micro="nanoblading">
                 <div class="portfolio-image">
-                    <video autoplay loop muted playsinline>
+                    <video loop muted playsinline preload="none" poster="Imagenes/posters/Interior Design Promo and Sales Business Instagram Reel in Green Black and _20250128_201400_0001.jpg" data-lazy-video>
                         <source src="Imagenes/Microblading/Interior Design Promo and Sales Business Instagram Reel in Green Black and _20250128_201400_0001.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay">
@@ -1441,7 +1441,7 @@
             <!-- Ejemplo 8: Proceso Detallado -->
             <div class="portfolio-item" data-category-micro="hiperreal">
                 <div class="portfolio-image">
-                    <video autoplay loop muted playsinline>
+                    <video loop muted playsinline preload="none" poster="Imagenes/posters/Reels para Instagram Agente Inmobiliario Minimalista Beige y Marrón_20240928_200000_0002.jpg" data-lazy-video>
                         <source src="Imagenes/Microblading/Reels para Instagram Agente Inmobiliario Minimalista Beige y Marrón_20240928_200000_0002.mp4" type="video/mp4">
                     </video>
                     <div class="portfolio-overlay">
@@ -2216,6 +2216,30 @@
                 });
             }
         }
+    </script>
+    <script>
+        // Reproduce los vídeos del portfolio sólo cuando entran en pantalla.
+        // Sin esto, 8 vídeos con autoplay se descargaban enteros en cada visita.
+        (function () {
+            const vids = document.querySelectorAll('video[data-lazy-video]');
+            if (!vids.length) return;
+            if (!('IntersectionObserver' in window)) {
+                vids.forEach(v => { v.preload = 'metadata'; });
+                return;
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const v = entry.target;
+                    if (entry.isIntersecting) {
+                        if (v.preload === 'none') v.preload = 'auto';
+                        v.play().catch(() => {});
+                    } else {
+                        v.pause();
+                    }
+                });
+            }, { rootMargin: '200px 0px', threshold: 0.1 });
+            vids.forEach(v => io.observe(v));
+        })();
     </script>
 </body>
 </html>
